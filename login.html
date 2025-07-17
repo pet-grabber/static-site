@@ -7,16 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Login</h1>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
+  <div id="header">
+    <h1>Login</h1>
+    <div id="navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>  
   <form action="">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username"><br>
-    <label for="password">Password:</label><br>
-    <input type="password"><br>
-    <input type="submit" value="Submit"><br>
-    <img src="https://media.istockphoto.com/id/157030584/ro/vector/thumb-up-emoticon.webp?s=2048x2048&w=is&k=20&c=nfV-wETdFOz1_eFCDdqN9bpku1MQOdDRiLJJp5UUArE=" alt="" class="like-image">
+    <div class="container">
+      <label for="username" id="username">Username</label><br>
+      <input type="text" id="username"><br>
+    </div>
+    <div class="container">
+      <label for="password" id="password">Password</label><br>
+      <input type="password"><br>
+    </div>
+    <input type="submit" value="Submit" class="button" id="submit-button"><br>
   </form>
+  <img src="https://media.istockphoto.com/id/157030584/ro/vector/thumb-up-emoticon.webp?s=2048x2048&w=is&k=20&c=nfV-wETdFOz1_eFCDdqN9bpku1MQOdDRiLJJp5UUArE=" alt="" class="like-image">
 </body>
 </html>
