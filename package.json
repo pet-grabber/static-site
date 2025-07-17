@@ -21,6 +21,7 @@
     "firebase": "^11.10.0"
   },
   "devDependencies": {
+    "firebase-tools": "^14.11.0",
     "webpack": "^5.100.2",
     "webpack-cli": "^6.0.1",
     "wepack-cli": "^0.0.1-security"
