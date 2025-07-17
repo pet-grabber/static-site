@@ -32,24 +32,36 @@ a {
   font-size: 18px;
 }
 
+p {
+  font-size: 16px;
+}
 
 /* MENU */
 .menu {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background-attachment: scroll;
   background-size: auto;
   height: 55vh;
+  max-width: 1500px;
   padding: 10px 20px;
-  opacity: 75%;
   color: black;
   margin: 15px 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 #index-menu {
   background-image: url("https://images.unsplash.com/photo-1584921467312-99ff98cc2ebd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+#menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #about-menu-1 {
@@ -58,6 +70,16 @@ a {
 
 #about-menu-2 {
   background-image: url("https://images.unsplash.com/photo-1584921467312-99ff98cc2ebd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); 
+}
+
+#button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1000px;
+  height: 100px;
 }
 
 .button {
@@ -94,6 +116,9 @@ a {
 
 /* DETAILS = SHORT DESCRIPTION */
 #details {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   padding: 10px 20px;
   color: white;
 }
@@ -116,6 +141,7 @@ form {
   height: 35vh;
   background: #222222;
   color: white;
+  padding: 10px;
 }
 
 .container {
@@ -137,7 +163,10 @@ label {
 }
 
 input {
+  width: 50vw;
+  max-width: 200px;
   font-size: 20px;
+  border: none;
 }
 
 #submit-button {
@@ -146,7 +175,60 @@ input {
 
 /* LIKE */
 .like-image {
-  width: 250px;
+  width: 100vw;
   height: 250x;
 }
 
+/* RESPONSIVE DESIGN */
+@media screen and (width > 500px) {
+  .button {
+    height: 75px;
+    width: 200px;
+    font-size: 30px;
+  }
+
+  label, input {
+    font-size: 30px;
+  }
+
+  input {
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 65px;
+  }
+
+  a {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (width > 2000px) {
+  .button {
+    height: 100px;
+    width: 300px;
+    font-size: 50px;
+  }
+  label, input {
+    font-size: 50px;
+  }
+  input {
+    max-width: 400px;
+  }
+  h1 {
+    font-size: 100px;
+  }
+  a {
+    font-size: 40px;
+  }
+  p {
+    font-size: 36px;
+  }
+}
+
+/*TODO: OPTIMIZE FOR NOKIA 8110 4G */
