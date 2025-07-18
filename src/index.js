@@ -6,7 +6,8 @@ import {
   signInWithEmailAndPassword,
   AuthErrorCodes,
   setPersistence,
-  browserSessionPersistence
+  browserSessionPersistence,
+  createUserWithEmailAndPassword
 } from 'firebase/auth';
 
 const firebaseApp = initializeApp({
@@ -21,7 +22,7 @@ const firebaseApp = initializeApp({
 })
 
 const auth = getAuth(firebaseApp);
-connectAuthEmulator(auth, "http://localhost:9099");
+//connectAuthEmulator(auth, "http://localhost:9099");
 
 let btnLogin = document.getElementById("login-button");
 let txtEmail = document.getElementById("email");
@@ -45,11 +46,25 @@ const loginEmailPassword = async () => {
   }
 }
 
-setPersistence(auth, browserSessionPersistence)
-  .then(() => {
-  })
-  .catch((error) => {
-  })
+/*
+const createAccount = async () => {
+  const loginEmail = txtEmail.value;
+  const loginPassword = txtPassword.value;
+
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
+    console.log(userCredential.user);
+  }
+  catch(error) {
+    console.log(error);
+    if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
+      alert("Wrong password. Try again!");
+    } else {
+      alert(error.message);
+    }
+  }
+}
+*/
 
 btnLogin.addEventListener("click", loginEmailPassword);
 
@@ -64,4 +79,10 @@ onAuthStateChanged(auth, user => {
   } else {
     console.log("No user!");
   }
+});
+
+setPersistence(auth, browserSessionPersistence)
+  .then(() => {
+  })
+  .catch((error) => {
 });
