@@ -68,14 +68,10 @@ const createAccount = async () => {
 
 btnLogin.addEventListener("click", loginEmailPassword);
 
-const loadApp = () => {
-  alert("Loading app.");
-}
-
 // Detect auth state
 onAuthStateChanged(auth, user => {
   if (user) {
-    loadApp();
+    window.location.href = '/app.html';
   } else {
     console.log("No user!");
   }
