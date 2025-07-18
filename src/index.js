@@ -3,7 +3,10 @@ import {
   getAuth, 
   onAuthStateChanged,
   connectAuthEmulator,
-  signInWithEmailAndPassword
+  signInWithEmailAndPassword,
+  AuthErrorCodes,
+  setPersistence,
+  browserSessionPersistence
 } from 'firebase/auth';
 
 const firebaseApp = initializeApp({
@@ -28,16 +31,38 @@ const loginEmailPassword = async () => {
   const loginEmail = txtEmail.value;
   const loginPassword = txtPassword.value;
 
-  const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
-  console.log(userCredential.user);
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+    console.log(userCredential.user);
+  }
+  catch(error) {
+    console.log(error);
+    if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
+      alert("Wrong password. Try again!");
+    } else {
+      alert(error.message);
+    }
+  }
 }
+
+setPersistence(auth, browserSessionPersistence)
+  .then(() => {
+    return signInWithEmailAndPassword(auth, email, password);
+  })
+  .catch((error) => {
+    alert(error.message);
+  })
 
 btnLogin.addEventListener("click", loginEmailPassword);
 
+const loadApp = () => {
+  alert("Loading app.");
+}
+
 // Detect auth state
 onAuthStateChanged(auth, user => {
-  if (user !== null) {
-    console.log("Logged in!");
+  if (user) {
+    loadApp();
   } else {
     console.log("No user!");
   }
