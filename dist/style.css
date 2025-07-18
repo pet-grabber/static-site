@@ -158,11 +158,11 @@ label {
   font-size: 20px;
 }
 
-#username {
+#username-label {
   margin-right: 10px;
 }
 
-#password {
+#password-label {
   margin-right: 5px;
 }
 
@@ -173,7 +173,7 @@ input {
   border: none;
 }
 
-#submit-button {
+#login-button {
   margin: 10px;
 }
 

@@ -1,5 +1,10 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { 
+  getAuth, 
+  onAuthStateChanged,
+  connectAuthEmulator,
+  signInWithEmailAndPassword
+} from 'firebase/auth';
 
 const firebaseApp = initializeApp({
 //   file deepcode ignore HardcodedNonCryptoSecret: it's safe to include the firebase config file api key in the client side
@@ -11,7 +16,22 @@ const firebaseApp = initializeApp({
   appId: "1:368088508063:web:1bb6619fedc74aa4e964aa",
   measurementId: "G-QH99SWQXJS"
 })
+
 const auth = getAuth(firebaseApp);
+connectAuthEmulator(auth, "http://localhost:9099");
+
+let btnLogin = document.getElementById("login-button");
+let txtEmail = document.getElementById("email");
+let txtPassword = document.getElementById("password");
+
+const loginEmailPassword = async () => {
+  const loginEmail = txtEmail.value;
+  const loginPassword = txtPassword.value;
+
+  
+}
+
+btnLogin.addEventListener("click", loginEmailPassword);
 
 // Detect auth state
 onAuthStateChanged(auth, user => {
