@@ -47,10 +47,8 @@ const loginEmailPassword = async () => {
 
 setPersistence(auth, browserSessionPersistence)
   .then(() => {
-    return signInWithEmailAndPassword(auth, email, password);
   })
   .catch((error) => {
-    alert(error.message);
   })
 
 btnLogin.addEventListener("click", loginEmailPassword);
