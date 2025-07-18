@@ -9,7 +9,8 @@
   },
   "emulators": {
     "hosting": {
-      "port": 5033
+      "port": 5033,
+      "host": "0.0.0.0"
     },
     "ui": {
       "enabled": true
