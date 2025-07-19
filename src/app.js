@@ -62,3 +62,20 @@ slider1.oninput = function () {
 slider2.oninput = function () {
   output2.innerHTML = this.value;
 }
+
+/* Gripping */
+let gripBtn = document.getElementById("grip-button");
+
+let grip = false;
+
+function gripFunction() {
+  if (!grip) {
+    grip = true;
+    gripBtn.innerHTML = "Grip: On";
+  } else {
+    grip = false;
+    gripBtn.innerHTML = "Grip: Off";
+  }
+}
+
+gripBtn.addEventListener("click", gripFunction);

@@ -238,6 +238,12 @@ input {
 }
 
 /* APP */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .feed-container {
   display: flex;
   justify-content: center;
@@ -315,6 +321,11 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* GRIP SWITCH */
+#grip-button {
+  margin: 10px;
 }
 
 /*TODO: OPTIMIZE FOR NOKIA 8110 4G */
