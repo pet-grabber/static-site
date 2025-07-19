@@ -27,6 +27,8 @@ body {
 
 h1 {
   font-size: 40px;
+  color: white;
+  text-align: center; 
 }
 
 a {
@@ -233,6 +235,18 @@ input {
   p {
     font-size: 36px;
   }
+}
+
+/* APP */
+.feed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#live-feed {
+  width: 528px;
+  height: 704px;
 }
 
 /*TODO: OPTIMIZE FOR NOKIA 8110 4G */
