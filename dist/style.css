@@ -257,4 +257,64 @@ input {
   margin-top: 10px;
 }
 
+.slidecontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+/* https://www.w3schools.com/howto/howto_js_rangeslider.asp* /
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #ffbd03; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #ffbd03; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+} 
+
+.text {
+  color: white;
+  margin: 10px;
+}
+
+.control-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.texts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /*TODO: OPTIMIZE FOR NOKIA 8110 4G */

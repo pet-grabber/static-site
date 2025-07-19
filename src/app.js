@@ -49,3 +49,16 @@ document.addEventListener("keyup", keyUpHandler);
 // Call move() continuously
 setInterval(move, 100);
 
+/* Sliders */
+let slider1 = document.getElementById("range1");
+let slider2 = document.getElementById("range2");
+let output1 = document.getElementById("text1");
+let output2 = document.getElementById("text2");
+
+slider1.oninput = function () {
+  output1.innerHTML = this.value;
+}
+
+slider2.oninput = function () {
+  output2.innerHTML = this.value;
+}
