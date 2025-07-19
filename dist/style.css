@@ -205,6 +205,10 @@ input {
     font-size: 65px;
   }
 
+  #app-h1 {
+    font-size: 40px;
+  }
+
   a {
     font-size: 25px;
   }
@@ -238,6 +242,10 @@ input {
 }
 
 /* APP */
+#app-body {
+  max-height: 100vh;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -247,6 +255,12 @@ input {
 .feed-container {
   display: flex;
   justify-content: center;
+}
+
+.controls-container, .sliders-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #live-feed {
@@ -311,7 +325,7 @@ input {
   margin: 10px;
 }
 
-.control-container {
+.slider-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -326,6 +340,19 @@ input {
 /* GRIP SWITCH */
 #grip-button {
   margin: 10px;
+}
+
+/* RESPONSIVE DESIGN FOR APP */
+@media screen and (width > 600px) {
+  .app-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text {
+    margin: 0;
+  }
 }
 
 /*TODO: OPTIMIZE FOR NOKIA 8110 4G */
