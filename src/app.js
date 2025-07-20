@@ -1,4 +1,4 @@
-import { auth } from './firebase.js';
+import { auth, database} from './firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
 
 const loadApp = () => {
