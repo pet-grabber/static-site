@@ -5,6 +5,10 @@ import {
   browserSessionPersistence,
   setPersistence
 } from 'firebase/auth';
+import { 
+  getDatabase,
+  connectDatabaseEmulator 
+} from 'firebase/database';
 
 const firebaseApp = initializeApp({
 //   file deepcode ignore HardcodedNonCryptoSecret: it's safe to include the firebase config file api key in the client side
@@ -14,12 +18,16 @@ const firebaseApp = initializeApp({
   storageBucket: "pet-grabber.firebasestorage.app",
   messagingSenderId: "368088508063",
   appId: "1:368088508063:web:1bb6619fedc74aa4e964aa",
-  measurementId: "G-QH99SWQXJS"
+  measurementId: "G-QH99SWQXJS",
+  databaseURL: "https://pet-grabber-default-rtdb.europe-west1.firebasedatabase.app/"
 })
 
 const auth = getAuth(firebaseApp);
+const database = getDatabase(firebaseApp);
+
 // connectAuthEmulator(auth, "http://localhost:9099");
+connectDatabaseEmulator(database, "localhost", 9000);
 
 setPersistence(auth, browserSessionPersistence);
 
-export { auth };
+export { auth, database };

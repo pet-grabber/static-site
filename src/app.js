@@ -1,5 +1,6 @@
-import { auth } from './firebase.js';
+import { auth, database } from './firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
+import { ref, set } from 'firebase/database';
 
 const loadApp = () => {
   alert("Loading app.");
@@ -33,12 +34,37 @@ function keyUpHandler(e) {
   }
 }
 
+let direction = "";
+
+
 function move() {
-  let direction = "";
+  direction = "";
   for (const key in keyObj) {
     if (keyObj[key]) {
       direction += key; // This will combine e.g., "wd" if both pressed
     }
+  }
+  switch (direction) {
+    case "w":
+      direction = "forward";
+      break;
+    case "wa":
+      direction = "forward_left";
+      break;
+    case "wd":
+      direction = "forward_right";
+      break;
+    case "s":
+      direction = "backward";
+      break;
+    case "as":
+      direction = "backward_left";
+      break;
+    case "sd":
+      direction = "backward_right";
+      break;
+    default:
+      direction = "INVALID";
   }
   document.getElementById("movement").innerHTML = ("Moving: " + direction); // You can change this to actual logic
 }
@@ -79,3 +105,20 @@ function gripFunction() {
 }
 
 gripBtn.addEventListener("click", gripFunction);
+
+function writeUserData(directie, umar, brat, cleste) {
+  if (directie === undefined) directie = null;
+  if (umar === undefined) umar = null;
+  if (brat === undefined) brat = null;
+  if (cleste === undefined) cleste = null;
+
+  set(ref(database, 'commands/'), {
+    directie: directie,
+    umar: Number(umar),
+    brat: Number(brat),
+    cleste: cleste
+  });
+}
+
+/* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
+setInterval( function() { writeUserData(direction, output1.innerHTML, output2.innerHTML, grip); }, 100);
