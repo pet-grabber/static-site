@@ -27,3 +27,4 @@ setPersistence(auth, browserSessionPersistence);
 const database = getDatabase(firebaseApp);
 
 export { auth, database };
+

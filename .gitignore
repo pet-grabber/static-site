@@ -68,4 +68,5 @@ node_modules/
 # dataconnect generated files
 .dataconnect
 
+# don't expose database rules
 database.rules.json

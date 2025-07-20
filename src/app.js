@@ -1,5 +1,6 @@
-import { auth, database} from './firebase.js';
+import { auth, database } from './firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
+import { ref, set } from 'firebase/database';
 
 const loadApp = () => {
   alert("Loading app.");
@@ -40,6 +41,28 @@ function move() {
       direction += key; // This will combine e.g., "wd" if both pressed
     }
   }
+  switch (direction) {
+    case "w":
+      direction = "forward";
+      break;
+    case "wa":
+      direction = "forward_left";
+      break;
+    case "wd":
+      direction = "forward_right";
+      break;
+    case "s":
+      direction = "backward";
+      break;
+    case "as":
+      direction = "backward_left";
+      break;
+    case "sd":
+      direction = "backward_right";
+      break;
+    default:
+      direction = "INVALID";
+  }
   document.getElementById("movement").innerHTML = ("Moving: " + direction); // You can change this to actual logic
 }
 
@@ -79,3 +102,14 @@ function gripFunction() {
 }
 
 gripBtn.addEventListener("click", gripFunction);
+
+function writeUserData(directie, umar, brat, cleste) {
+  set(ref(database, 'commands/'), {
+    directie: directie,
+    umar: umar,
+    brat: brat,
+    cleste: cleste
+  });
+}
+
+setInterval(writeUserData, 100);
