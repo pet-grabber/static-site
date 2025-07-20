@@ -64,7 +64,7 @@ function move() {
       direction = "backward_right";
       break;
     default:
-      direction = "INVALID";
+      direction = "stop";
   }
   document.getElementById("movement").innerHTML = ("Moving: " + direction); // You can change this to actual logic
 }
