@@ -34,8 +34,9 @@ function keyUpHandler(e) {
   }
 }
 
+let direction = "";
+
 function move() {
-  let direction = "";
   for (const key in keyObj) {
     if (keyObj[key]) {
       direction += key; // This will combine e.g., "wd" if both pressed
@@ -112,4 +113,5 @@ function writeUserData(directie, umar, brat, cleste) {
   });
 }
 
-setInterval(writeUserData, 100);
+/* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
+setInterval( function() { writeUserData(direction, output1, output2, grip); }, 100);

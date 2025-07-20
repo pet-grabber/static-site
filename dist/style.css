@@ -280,6 +280,7 @@ input {
 .slidecontainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 10px;
 }
@@ -340,6 +341,11 @@ input {
 /* GRIP SWITCH */
 #grip-button {
   margin: 10px;
+}
+
+.slider-label {
+  color: white;
+  margin-right: 10px;
 }
 
 /* RESPONSIVE DESIGN FOR APP */
