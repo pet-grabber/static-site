@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="/app.bundle.js"></script>
+</head>
+<body style="display:none;" id="app-body">
+  <div id="header">
+    <h1 id="app-h1">Pet Grabber Remote Control</h1>
+  </div>
+  <div class="app-container">
+    <div class="feed-container">
+      <img src="https://pet-grabber.win/video_feed" alt="https://pet-grabber.win/video_feed" class="fullZoomOut shrinkToFit" id="live-feed">
+    </div>
+    <div class="controls-container">
+      <div class="movement">
+        <p id="movement"></p>
+      </div>
+      <div class="slider-container">
+        <div class="sliders-container">
+          <div class="slidecontainer">
+            <label for="range1" class="slider-label">Umar</label>
+            <input type="range" min="0" max="180" value="90" class="slider" id="range1">
+          </div>
+          <div class="slidecontainer">
+            <label for="range2" class="slider-label">Brat</label>
+            <input type="range" min="0" max="180" value="90" class="slider" id="range2">
+          </div>
+        </div>
+        <div class="texts-container">
+          <p id="text1" class="text">90</p>
+          <p id="text2" class="text">90</p>
+        </div>
+      </div>
+      <div class="grip">
+        <button class="button" id="grip-button">Grip: Off</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

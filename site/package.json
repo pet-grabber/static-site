@@ -1,0 +1,29 @@
+{
+  "name": "static-site",
+  "version": "0.0.0",
+  "description": "Static site for the Pet Grabber project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pet-grabber/static-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pet-grabber/static-site/issues"
+  },
+  "homepage": "https://github.com/pet-grabber/static-site#readme",
+  "dependencies": {
+    "firebase": "^11.10.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.11.0",
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1",
+    "wepack-cli": "^0.0.1-security"
+  }
+}
