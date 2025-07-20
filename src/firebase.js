@@ -5,7 +5,10 @@ import {
   browserSessionPersistence,
   setPersistence
 } from 'firebase/auth';
-import { getDatabase } from 'firebase/database';
+import { 
+  getDatabase,
+  connectDatabaseEmulator 
+} from 'firebase/database';
 
 const firebaseApp = initializeApp({
 //   file deepcode ignore HardcodedNonCryptoSecret: it's safe to include the firebase config file api key in the client side
@@ -20,11 +23,11 @@ const firebaseApp = initializeApp({
 })
 
 const auth = getAuth(firebaseApp);
+const database = getDatabase(firebaseApp);
+
 // connectAuthEmulator(auth, "http://localhost:9099");
+connectDatabaseEmulator(database, "localhost", 9000);
 
 setPersistence(auth, browserSessionPersistence);
 
-const database = getDatabase(firebaseApp);
-
 export { auth, database };
-

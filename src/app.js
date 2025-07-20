@@ -36,7 +36,9 @@ function keyUpHandler(e) {
 
 let direction = "";
 
+
 function move() {
+  direction = "";
   for (const key in keyObj) {
     if (keyObj[key]) {
       direction += key; // This will combine e.g., "wd" if both pressed
@@ -105,13 +107,18 @@ function gripFunction() {
 gripBtn.addEventListener("click", gripFunction);
 
 function writeUserData(directie, umar, brat, cleste) {
+  if (directie === undefined) directie = null;
+  if (umar === undefined) umar = null;
+  if (brat === undefined) brat = null;
+  if (cleste === undefined) cleste = null;
+
   set(ref(database, 'commands/'), {
     directie: directie,
-    umar: umar,
-    brat: brat,
+    umar: Number(umar),
+    brat: Number(brat),
     cleste: cleste
   });
 }
 
 /* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
-setInterval( function() { writeUserData(direction, output1, output2, grip); }, 100);
+setInterval( function() { writeUserData(direction, output1.innerHTML, output2.innerHTML, grip); }, 100);
