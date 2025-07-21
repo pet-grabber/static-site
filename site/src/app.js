@@ -2,6 +2,15 @@ import { auth, database } from './firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
 import { ref, set } from 'firebase/database';
 
+let mode = ""; // Mobile or PC
+let direction = "";
+
+if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
+  mode = "mobile";
+} else {
+  mode = "pc";
+}
+
 onAuthStateChanged(auth, user => {
   if (user) {
     document.body.style.display = 'block';
@@ -29,8 +38,6 @@ function keyUpHandler(e) {
     keyObj[e.key] = false;
   }
 }
-
-let direction = "";
 
 function move() {
   direction = "";
@@ -61,14 +68,15 @@ function move() {
     default:
       direction = "stop";
   }
-  document.getElementById("movement").innerHTML = ("Moving: " + direction); // You can change this to actual logic
 }
 
 document.addEventListener("keydown", keyDownHandler);
 document.addEventListener("keyup", keyUpHandler);
 
-// Call move() continuously
-setInterval(move, 100);
+// Call move() continuously only if on PC
+if (mode === "pc") {
+  setInterval(move, 100);
+}
 
 /* Sliders */
 let slider1 = document.getElementById("range1");
@@ -102,6 +110,7 @@ function gripFunction() {
 gripBtn.addEventListener("click", gripFunction);
 
 function writeUserData(directie, umar, brat, cleste) {
+  console.log(direction);
   if (directie === undefined) directie = null;
   if (umar === undefined) umar = null;
   if (brat === undefined) brat = null;
@@ -113,6 +122,7 @@ function writeUserData(directie, umar, brat, cleste) {
     brat: Number(brat),
     cleste: cleste
   });
+  direction = "stop";
 }
 
 /* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
@@ -120,10 +130,14 @@ setInterval( function() { writeUserData(direction, output1.innerHTML, output2.in
 
 const targetClass = "dpad-button";
 
-let selectedId = null;
-
-document.addEventListener('click', function(event) {
+document.addEventListener('mousedown', function(event) {
   if (event.target.classList.contains(targetClass)) {
-    
+    direction = event.target.id;
+  }
+});
+
+document.addEventListener('mouseup', function(event) {
+  if (event.target.id === direction) {
+    direction = "stop";
   }
 });
