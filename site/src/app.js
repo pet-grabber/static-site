@@ -117,3 +117,13 @@ function writeUserData(directie, umar, brat, cleste) {
 
 /* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
 setInterval( function() { writeUserData(direction, output1.innerHTML, output2.innerHTML, grip); }, 100);
+
+const targetClass = "dpad-button";
+
+let selectedId = null;
+
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains(targetClass)) {
+    
+  }
+});
