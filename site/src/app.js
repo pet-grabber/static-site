@@ -2,10 +2,6 @@ import { auth, database } from './firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
 import { ref, set } from 'firebase/database';
 
-const loadApp = () => {
-  alert("Loading app.");
-}
-
 onAuthStateChanged(auth, user => {
   if (user) {
     document.body.style.display = 'block';
