@@ -3,7 +3,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { ref, set } from 'firebase/database';
 
 let mode = ""; // Mobile or PC
-let direction = "";
+let direction = "stop";
 
 if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
   mode = "mobile";
@@ -122,7 +122,7 @@ function writeUserData(directie, umar, brat, cleste) {
     brat: Number(brat),
     cleste: cleste
   });
-  direction = "stop";
+  //direction = "stop";
 }
 
 /* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
@@ -130,7 +130,7 @@ setInterval( function() { writeUserData(direction, output1.innerHTML, output2.in
 
 const targetClass = "dpad-button";
 
-document.addEventListener('mousedown', function(event) {
+document.addEventListener('mouseenter', function(event) {
   if (event.target.classList.contains(targetClass)) {
     direction = event.target.id;
   }
