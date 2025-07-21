@@ -32,7 +32,6 @@ function keyUpHandler(e) {
 
 let direction = "";
 
-
 function move() {
   direction = "";
   for (const key in keyObj) {
