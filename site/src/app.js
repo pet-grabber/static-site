@@ -123,6 +123,7 @@ function writeUserData(directie, umar, brat, cleste) {
     cleste: cleste
   });
   //direction = "stop";
+  document.getElementById("test-text").innerHTML = direction;
 }
 
 /* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
@@ -130,12 +131,12 @@ setInterval( function() { writeUserData(direction, output1.innerHTML, output2.in
 
 const targetClass = "dpad-button";
 
-document.addEventListener('mousedown', function(event) {
+document.addEventListener('touchstart', function(event) {
   if (event.target.classList.contains(targetClass)) {
     direction = event.target.id;
   }
 });
 
-document.addEventListener('mouseup', function(event) {
+document.addEventListener('touchend', function(event) {
   direction = "stop";
 });
