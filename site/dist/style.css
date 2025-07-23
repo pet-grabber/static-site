@@ -48,14 +48,14 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-attachment: scroll;
   background-size: auto;
   height: 70vh;
-  max-width: 1500px;
   padding: 10px 20px;
   color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .about-menu {
@@ -67,6 +67,7 @@ p {
 
 #index-menu {
   /* https://images.unsplash.com/photo-1584921467312-99ff98cc2ebd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D */
+  width: 100vw;
   background-image: url("https://live.staticflickr.com/65535/54667646872_e8f07f7af3_b.jpg");
 }
 
@@ -85,10 +86,13 @@ p {
 
 #index-subtitle {
   margin-top: 25px;
+  padding: 2px;
   font-size: 20px;
   color: rgb(0, 36, 0);
   font-weight: normal;
   margin-bottom: 225px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
 #button-container {
@@ -263,62 +267,6 @@ label {
   height: 250x;
 }
 
-/* RESPONSIVE DESIGN */
-@media screen and (width > 500px) {
-  .button {
-    height: 75px;
-    width: 200px;
-    font-size: 30px;
-  }
-
-  label, input {
-    font-size: 30px;
-  }
-
-  input {
-    max-width: 300px;
-  }
-
-  h1 {
-    font-size: 65px;
-  }
-
-  #app-h1 {
-    font-size: 40px;
-  }
-
-  a {
-    font-size: 25px;
-  }
-
-  p {
-    font-size: 22px;
-  }
-}
-
-@media screen and (width > 2000px) {
-  .button {
-    height: 100px;
-    width: 300px;
-    font-size: 50px;
-  }
-  label, input {
-    font-size: 50px;
-  }
-  input {
-    max-width: 400px;
-  }
-  h1 {
-    font-size: 100px;
-  }
-  a {
-    font-size: 40px;
-  }
-  p {
-    font-size: 36px;
-  }
-}
-
 /* APP */
 #app-body {
   max-height: 100vh;
@@ -486,6 +434,23 @@ label {
 /* ABOUT PAGE */
 .about-paragraph {
   margin-bottom: 15px;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (width < 410px) {
+  h1 {
+    font-size: 36px;
+  }
+  #index-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media screen and (width < 370px) {
+  #index-subtitle {
+    font-size: 16px;
+  }
 }
 
 /*TODO: OPTIMIZE FOR NOKIA 8110 4G */
