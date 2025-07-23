@@ -459,10 +459,21 @@ label {
     align-items: center;
     justify-content: center;
   }
-  
+
   .text {
     margin: 0;
   }
+}
+
+/* https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable */
+/* Make controls in the remote controller unselectable */
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /*TODO: OPTIMIZE FOR NOKIA 8110 4G */

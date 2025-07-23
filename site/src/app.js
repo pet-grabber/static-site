@@ -130,14 +130,12 @@ setInterval( function() { writeUserData(direction, output1.innerHTML, output2.in
 
 const targetClass = "dpad-button";
 
-document.addEventListener('mouseenter', function(event) {
+document.addEventListener('mousedown', function(event) {
   if (event.target.classList.contains(targetClass)) {
     direction = event.target.id;
   }
 });
 
 document.addEventListener('mouseup', function(event) {
-  if (event.target.id === direction) {
-    direction = "stop";
-  }
+  direction = "stop";
 });

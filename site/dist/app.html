@@ -15,34 +15,34 @@
     <div class="feed-container">
       <img src="https://pet-grabber.win/video_feed" alt="https://pet-grabber.win/video_feed" class="fullZoomOut shrinkToFit" id="live-feed">
     </div>
-    <div id="movement-container">
-      <div id="forward">
-        <button class="dpad-button" id="forward-left">◤</button>
-        <button class="dpad-button" id="forward">▲</button>
-        <button class="dpad-button" id="forward-right">◥</button>
+    <div id="movement-container unselectable">
+      <div id="forward unselectable">
+        <button class="dpad-button unselectable" id="forward-left">◤</button>
+        <button class="dpad-button unselectable" id="forward">▲</button>
+        <button class="dpad-button unselectable" id="forward-right">◥</button>
       </div>
-      <div id="backward">
-        <button class="dpad-button" id="backward-left">◣</button>
-        <button class="dpad-button" id="backward">▼</button>
-        <button class="dpad-button" id="backward-right">◢</button>
-      </div>
-    </div>
-    <div class="controls-container">
-      <div id="label-container" class="control-container">
-        <label for="range1" class="slider-label">Umar</label>
-        <label for="range2" class="slider-label">Brat</label>
-      </div>
-      <div id="sliders-container" class="control-container">
-        <input type="range" min="0" max="180" value="90" class="slider" id="range1">
-        <input type="range" min="0" max="180" value="90" class="slider" id="range2">
-      </div>
-      <div class="texts-container" class="control-container">
-        <p id="text1" class="text">90</p>
-        <p id="text2" class="text">90</p>
+      <div id="backward unselectable">
+        <button class="dpad-button unselectable" id="backward-left">◣</button>
+        <button class="dpad-button unselectable" id="backward">▼</button>
+        <button class="dpad-button unselectable" id="backward-right">◢</button>
       </div>
     </div>
-    <div class="grip">
-      <button class="button" id="grip-button">Grip: Off</button>
+    <div class="controls-container unselectable">
+      <div id="label-container" class="control-container unselectable">
+        <label for="range1" class="slider-label unselectable">Umar</label>
+        <label for="range2" class="slider-label unselectable">Brat</label>
+      </div>
+      <div id="sliders-container" class="control-container unselectable">
+        <input type="range" min="0" max="180" value="90" class="slider unselectable" id="range1">
+        <input type="range" min="0" max="180" value="90" class="slider unselectable" id="range2">
+      </div>
+      <div class="texts-container" class="control-container unselectable">
+        <p id="text1" class="text unselectable">90</p>
+        <p id="text2" class="text unselectable">90</p>
+      </div>
+    </div>
+    <div class="grip unselectable">
+      <button class="button unselectable" id="grip-button">Grip: Off</button>
     </div>
   </div>
 </body>
