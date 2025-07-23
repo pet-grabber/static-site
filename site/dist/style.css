@@ -475,6 +475,13 @@ label {
   }
 }
 
+@media screen and (width > 600px) {
+  .field, #login-button {
+    max-width: 560px;
+  }
+
+}
+
 @media screen and (width > 1350px) {
   #button-container {
     width: 450px;
@@ -489,38 +496,42 @@ label {
 
 @media screen and (width > 2000px) {
   #button-container {
-    width: 750px;
-    height: 250px;
+    width: 650px;
+    height: 200px;
   }
 
   #launch-button, #donate-button, #about-button {
-    height: 100px;
-    font-size: 50px;
+    height: 75px;
+    font-size: 36px;
     border-radius: 10px;
     box-shadow: 0 7px 0 0 rgb(0 0 0 / 50%);
   }
 
   h1 {
-    font-size: 80px;
+    font-size: 75px;
   }
 
   #index-subtitle {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   h2 {
-    font-size: 90px;
+    font-size: 56px;
   }
 
   p, #github-link {
-    font-size: 40px;
+    font-size: 28px;
     margin: 5px;
   }
 
   .field, #login-button {
-    max-width: 1000px;
-    height: 75px;
-    font-size: 36px;
+    max-width: 800px;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  #navigation a {
+    font-size: 24px;
   }
 }
 
