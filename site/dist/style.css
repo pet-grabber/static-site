@@ -90,7 +90,7 @@ p {
   font-size: 20px;
   color: rgb(0, 36, 0);
   font-weight: normal;
-  margin-bottom: 225px;
+  margin-bottom: 20vh;
   backdrop-filter: blur(10px);
   border-radius: 10px;
 }
@@ -108,6 +108,7 @@ p {
   display: flex;
   flex-direction: row;
   width: 100%;
+  max-width: 95vw;
 }
 
 .button {
@@ -116,6 +117,7 @@ p {
   justify-content: space-around;
   height: 50px;
   width: 100%;
+  max-width: 95vw;
   border-radius: 5px;
   background: #77AD78;
   opacity: 100%;
@@ -254,10 +256,9 @@ label {
 
 #launch-button {
   width: 100%;
-  height: 45px;
+  height: 50px;
   margin: 10px;
   border: none;
-  font-size: 20px;
 }
 
 
@@ -453,4 +454,74 @@ label {
   }
 }
 
-/*TODO: OPTIMIZE FOR NOKIA 8110 4G */
+@media screen and (width < 350px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (width < 340px) {
+  #index-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* https://stackoverflow.com/questions/6285279/i-need-a-max-margin-css-property-but-it-doesnt-exist-how-could-i-fake-it */
+@media screen and (height > 915px) {
+  #index-subtitle {
+    margin-bottom: 225px;
+  }
+}
+
+@media screen and (width > 1350px) {
+  #button-container {
+    width: 450px;
+    height: 150px;
+  }
+
+  #launch-button, #donate-button, #about-button {
+    height: 60px;
+    font-size: 26px;
+  }
+
+  .button {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (width > 2000px) {
+  #button-container {
+    width: 800px;
+    height: 300px;
+  }
+
+  #launch-button, #donate-button, #about-button {
+    height: 100px;
+    font-size: 48px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  #index-subtitle {
+    font-size: 36px;
+  }
+
+  .button {
+    font-size: 60px;
+    border-radius: 20px;
+    box-shadow: 0 7px 0 0 rgb(0 0 0 / 50%);
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  p, #github-link {
+    font-size: 24px;
+    margin: 5px;
+  }
+}
+
+/* TODO: OPTIMIZE FOR NOKIA 8110 4G */
