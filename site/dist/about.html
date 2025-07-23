@@ -26,10 +26,26 @@
     </div>
     <div class="menu about" id="about-menu-2">
       <p>
+        Robotul nostru este învelit în însăși natura înconjurătoare fiind construit din plăci OSB tăiate manual care compun baza, pe care este dispus un mic coș de gunoi, și brațul robotului care are o lungime de 40 cm.
+      </p>
+      <p>
+        PET Grabber funcționează cu ajutorul a trei servomotoare MG996R, care controlează două grade de libertate și cleștele brațului robotic, precum și cu patru motoare DC N20, care acționează cele patru roți, transformând robotul într-un vehicul cu tracțiune integrală 4x4.
+      </p>
+    </div>  
+    <div class="menu about" id="about-menu-3">
+      <p>
+        Cele trei servomotoare sunt conectate la un modul PCA9685, care primește comenzi de la Arduino prin interfața I2C. Acesta este alimentat de trei baterii 18650 montate într-un suport. Tensiunea acestora este redusă la 6V cu ajutorul unui XL4016 filtrat suplimentar cu ajutorul a două condensatoare: unul electrolitic de 1000 μF/25V pentru amortizarea vârfurilor de curent și unul ceramic de 0.1 μF/50V pentru reducerea zgomotului de înaltă frecvență.
+      </p>
+      <p>
+        Tot aceste baterii (cu o tensiune nominală de 3,7V, o capacitate de 2500 mAh și un curent maxim de descărcare continuă de 20A) alimentează și două drivere de motoare L298N, după ce tensiunea este stabilizată cu un alt modul XL4016, răcit constant de un ventilator controlat de Raspberry Pi după ce tensiunea este stabilizată cu un modulul XL4016 și filtrată suplimentar cu ajutorul a două condensatoare la fel ca în cazul servomotoarelor.
+      </p>
+    </div>
+    <div class="menu about" id="about-menu-4">
+      <p>
         În ceea ce privește aplicația web, Raspberry Pi-ul rulează un server web care transmite un livestream MJPEG (Motion JPEG) de la cameră, folosind Flask. Acest server web este expus în siguranță pe internet printr-un Cloudflare Tunnel, care oferă un URL accesibil public pentru feed-ul live de la cameră.
       </p>
       <p>
-        Utilizatorul accesează site-ul pet-grabber.web.app, găzduit pe Firebase, și se autentifică, obținând acces la feed-ul camerei (de pe URL-ul de la Cloudflare) și la controalele robotului. Comenzile introduse de utilizator sunt salvate în Firebase Realtime Database, iar Raspberry Pi-ul monitorizează aceste schimbări și le transmite în timp real la Arduino.
+        Utilizatorul accesează site-ul pet-grabber.web.app, găzduit pe Firebase, și se autentifică, obținând acces la feed-ul camerei (de pe URL-ul de la Cloudflare) și la controalele robotului. Comenzile introduse de utilizator sunt salvate în Firebase Realtime Database, iar Raspberry Pi-ul monitorizează aceste schimbări și le transmite în timp real la Arduino printr-o conexiune serial.
       </p>
     </div>
   </div>
