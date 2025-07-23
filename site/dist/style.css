@@ -428,6 +428,10 @@ label {
   margin-bottom: 15px;
 }
 
+#donate-form {
+  height: 100%;
+}
+
 
 /* RESPONSIVE DESIGN */
 @media screen and (width < 410px) {
