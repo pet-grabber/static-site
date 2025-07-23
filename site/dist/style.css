@@ -129,9 +129,15 @@ p {
   border: none;
 }
 
+#form-text-container {
+  max-width: 700px;
+}
+
 .donate {
   margin: 10px;
+  padding: 5px;
   width: 90%;
+  max-width: 700px;
 }
 
 .button:hover {
@@ -441,6 +447,9 @@ label {
   }
   #index-subtitle {
     font-size: 18px;
+  }
+  #welcome-back {
+    font-size: 26px;
   }
 }
 
