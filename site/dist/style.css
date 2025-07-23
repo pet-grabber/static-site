@@ -275,9 +275,10 @@ label {
   max-height: 100vh;
 }
 
-.app-container {
+.app-container, .big-control-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -298,6 +299,7 @@ label {
   justify-content: center;
   align-items: center;
   width: 90%;
+  max-width: 90vw;
 }
 
 #live-feed { 
@@ -307,7 +309,7 @@ label {
   text-align: center;
   /* Rest of styles */
   max-width: 528px;
-  max-height: 704px;
+  max-height: 50vh;
   max-width: 90vw;
   color: white;
 }
@@ -410,19 +412,6 @@ label {
   margin: 5px;
 }
 
-/* RESPONSIVE DESIGN FOR APP */
-@media screen and (width > 600px) {
-  .app-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .text {
-    margin: 0;
-  }
-}
-
 /* https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable */
 /* Make controls in the remote controller unselectable */
 .unselectable {
@@ -479,7 +468,15 @@ label {
   .field, #login-button {
     max-width: 560px;
   }
+}
 
+@media screen and (width > 1000px) {
+  .app-container {
+    flex-direction: row;
+  }
+  .texts-container {
+    width: 70px;
+  }
 }
 
 @media screen and (width > 1350px) {
@@ -519,7 +516,7 @@ label {
     font-size: 56px;
   }
 
-  p, #github-link {
+  p, #github-link, label {
     font-size: 28px;
     margin: 5px;
   }
@@ -532,6 +529,10 @@ label {
 
   #navigation a {
     font-size: 24px;
+  }
+
+  .texts-container {
+    width: 100px;
   }
 }
 
