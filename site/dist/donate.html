@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Donate</title>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="/index.bundle.js"></script>
 </head>
 <body>
   <div id="header">
@@ -15,10 +14,15 @@
       <a href="about.html" class="right">About</a>
     </div>
   </div>  
-  <form action="" id="form" onsubmit="return false;">
-    <input type="text" class="field" id="email" placeholder="Email address"><br>
-    <input type="password" class="field" id="password" placeholder="Password"><br>
-    <input type="submit" value="Login" class="button" id="login-button" placeholder="Password"><br>
+  <form>
+    <div id="form-text-container">
+      <h2 id="login-subtitle">You've generated €0.0 from ads</h2>
+      <h2 id="welcome-back">Choose a charity to donate to</h2>
+    </div>
+    <a class="button donate">Greenpeace</a>
+    <a class="button donate">Union of Concerned Scientists</a>
+    <a class="button donate">Natural Resources Defence Council</a>
+    <a class="button donate">Environmental Working Group</a>
   </form>
   <!-- <img src="https://media.istockphoto.com/id/157030584/vector/thumb-up-emoticon.jpg?s=612x612&w=0&k=20&c=GGl4NM_6_BzvJxLSl7uCDF4Vlo_zHGZVmmqOBIewgKg=" alt="" class="like-image"> -->
 </body>

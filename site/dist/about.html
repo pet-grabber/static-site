@@ -10,16 +10,27 @@
   <div id="header">
     <h1>About</h1>
     <div id="navigation">
-      <a href="index.html">Home</a>
-      <a href="login.html">Login</a>
+      <a href="index.html" class="left">Home</a>
+      <a href="login.html" class="right">Login</a>
     </div>
   </div>
   <div id="menu-container">
-    <div class="menu" class="left" id="about-menu-1">
-      <p>This text has changed!</p>
+    <div class="menu about" id="about-menu-1">
+      <p>
+        Precum faimosul Wall-E creat de Studioul de Animație Pixar este menit sa curete planeta care a ajuns sa fie acoperita de gunoaie, la fel este conceput și robotul nostru, PET Grabber. Format din 4 roti, un braț robotic și un joc inteligent de cuvinte - “PET” purtand în același timp și sensul de ambalaj de polietilen tereftalat, dar și de animal de companie - el vine în ajutorul prevenirii viitorului dezastruos înfățișat în filmul care ne-a inspirat. 
+      </p>
+      <br>
+      <p>
+        Deși suntem conștienți de faptul că luptă pentru un viitor sustenabil al planetei noastre trebuie să continue și în alte forme, avem speranța și încrederea că acest proiect va reuși să pună în lumina reflectoarelor problema deșeurilor și chiar sa ajute la soluționarea ei precum este prezentat în repo.
+      </p>
     </div>
-    <div class="menu" class="right" id="about-menu-2">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus est, eos officia, ullam possimus quia praesentium veritatis laboriosam modi dolore qui dolores quibusdam blanditiis totam laborum, molestiae atque amet! Voluptatem?</p>
+    <div class="menu about" id="about-menu-2">
+      <p>
+        În ceea ce privește aplicația web, Raspberry Pi-ul rulează un server web care transmite un livestream MJPEG (Motion JPEG) de la cameră, folosind Flask. Acest server web este expus în siguranță pe internet printr-un Cloudflare Tunnel, care oferă un URL accesibil public pentru feed-ul live de la cameră.
+      </p>
+      <p>
+        Utilizatorul accesează site-ul pet-grabber.web.app, găzduit pe Firebase, și se autentifică, obținând acces la feed-ul camerei (de pe URL-ul de la Cloudflare) și la controalele robotului. Comenzile introduse de utilizator sunt salvate în Firebase Realtime Database, iar Raspberry Pi-ul monitorizează aceste schimbări și le transmite în timp real la Arduino.
+      </p>
     </div>
   </div>
 </body>

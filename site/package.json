@@ -1,22 +1,22 @@
 {
-  "name": "static-site",
+  "name": "site",
   "version": "0.0.0",
-  "description": "Static site for the Pet Grabber project",
+  "description": "Site for the Pet Grabber project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pet-grabber/static-site.git"
+    "url": "git+https://github.com/pet-grabber/pet-grabber.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pet-grabber/static-site/issues"
+    "url": "https://github.com/pet-grabber/pet-grabber/issues"
   },
-  "homepage": "https://github.com/pet-grabber/static-site#readme",
+  "homepage": "https://github.com/pet-grabber/pet-grabber#readme",
   "dependencies": {
     "firebase": "^11.10.0"
   },
