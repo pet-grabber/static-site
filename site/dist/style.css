@@ -115,6 +115,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
   height: 50px;
   width: 100%;
   max-width: 95vw;
