@@ -36,7 +36,7 @@ a {
   font-size: 18px;
 }
 
-p {
+p, .about-anchor {
   text-align: center;
   font-size: 16px;
   max-width: 1750px;
@@ -314,7 +314,7 @@ label {
     font-size: 25px;
   }
 
-  p {
+  p, .about-anchor {
     font-size: 22px;
   }
 }
@@ -337,7 +337,7 @@ label {
   a {
     font-size: 40px;
   }
-  p {
+  p, .about-anchor {
     font-size: 36px;
   }
 }
