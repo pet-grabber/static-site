@@ -349,10 +349,16 @@ label {
   width: 90%;
 }
 
-#live-feed {
+#live-feed { 
+  /* For the alt text */
+  min-width: 100px;
+  min-height: 100px;
+  text-align: center;
+  /* Rest of styles */
   max-width: 528px;
   max-height: 704px;
   max-width: 90vw;
+  color: white;
 }
 
 #movement-container {
