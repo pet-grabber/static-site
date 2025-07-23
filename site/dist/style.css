@@ -59,9 +59,10 @@ p {
   background-position: center;
 }
 
-.about {
-  width: 90%;
-  margin-bottom: 15px;
+.about-menu {
+  background: white;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 
 #index-menu {
@@ -474,6 +475,11 @@ label {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+/* ABOUT PAGE */
+.about-paragraph {
+  margin-bottom: 15px;
 }
 
 /*TODO: OPTIMIZE FOR NOKIA 8110 4G */
