@@ -379,6 +379,11 @@ label {
   background: #504B43;
 }
 
+#wasd p {
+  color: white;
+  
+}
+
 .slidecontainer {
   display: flex;
   justify-content: center;
