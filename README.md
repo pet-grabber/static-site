@@ -24,16 +24,19 @@
 
 ### Materiale
 
-* OSB pentru bază și braț; baza este parțial învelită în 
-* ABS pentru clește
+* OSB pentru bază și braț; baza este parțial învelită în folie autocolantă de culoare maro
+* ABS pentru cleștele robotului
 
 ### Electronică
 - Raspberry Pi
 - Arduino UNO
+TODO
 
 ### Mecanică
 
 ## Perspective de viitor
+Ia din prezentare
 
 ## Imagini și videoclipuri
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
+Video cu robotul
