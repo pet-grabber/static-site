@@ -379,6 +379,11 @@ label {
   background: #504B43;
 }
 
+#wasd p {
+  color: white;
+  font-size: 24px;
+}
+
 .slidecontainer {
   display: flex;
   justify-content: center;
@@ -585,14 +590,23 @@ label {
   .texts-container {
     width: 100px;
   }
+
+  #wasd p {
+    font-size: 32px;
+  }
 }
 
 @media screen and (width > 3000px) {
   .about-menu {
     max-width: 1000px;
   }
+
   .about-paragraph {
     font-size: 20px;
+  }
+
+  #wasd p {
+    font-size: 36px;
   }
 }
 
