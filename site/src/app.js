@@ -78,6 +78,18 @@ if (mode === "pc") {
   setInterval(move, 100);
 }
 
+const targetClass = "dpad-button";
+
+document.addEventListener('touchstart', function(event) {
+  if (event.target.classList.contains(targetClass)) {
+    direction = event.target.id;
+  }
+});
+
+document.addEventListener('touchend', function(event) {
+  direction = "stop";
+});
+
 /* Sliders */
 let slider1 = document.getElementById("range1");
 let slider2 = document.getElementById("range2");
@@ -92,8 +104,17 @@ slider2.oninput = function () {
   output2.innerHTML = this.value;
 }
 
+/* https://stackoverflow.com/questions/26993363/javascript-change-elements-that-have-certain-class-and-attribute-pure-javasc */
+window.onload = function() {
+  slider1.value = 90;
+  slider2.value = 90;
+}
+
+
 /* Gripping */
 let gripBtn = document.getElementById("grip-button");
+
+gripBtn.addEventListener("click", gripFunction);
 
 let grip = false;
 
@@ -106,8 +127,6 @@ function gripFunction() {
     gripBtn.innerHTML = "Grip: Off";
   }
 }
-
-gripBtn.addEventListener("click", gripFunction);
 
 function writeUserData(directie, umar, brat, cleste) {
   console.log(direction);
@@ -122,21 +141,8 @@ function writeUserData(directie, umar, brat, cleste) {
     brat: Number(brat),
     cleste: cleste
   });
-  //direction = "stop";
   document.getElementById("test-text").innerHTML = direction;
 }
 
 /* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
 setInterval( function() { writeUserData(direction, output1.innerHTML, output2.innerHTML, grip); }, 100);
-
-const targetClass = "dpad-button";
-
-document.addEventListener('touchstart', function(event) {
-  if (event.target.classList.contains(targetClass)) {
-    direction = event.target.id;
-  }
-});
-
-document.addEventListener('touchend', function(event) {
-  direction = "stop";
-});

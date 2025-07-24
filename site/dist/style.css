@@ -48,18 +48,18 @@ p, .about-anchor {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-attachment: scroll;
   background-size: auto;
   height: 70vh;
-  max-width: 1500px;
   padding: 10px 20px;
   color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
 }
 
 .about-menu {
+  max-width: 500px;
   margin-bottom: 30px;
   padding: 20px;
   background-repeat: no-repeat;
@@ -85,12 +85,20 @@ p, .about-anchor {
 
 #index-menu {
   /* https://images.unsplash.com/photo-1584921467312-99ff98cc2ebd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D */
-  background-image: url("https://staging-jubilee.flickr.com/65535/54668721524_2720a258eb_b.jpg");
+  width: 100vw;
+  background-image: url("https://live.staticflickr.com/65535/54667646872_e8f07f7af3_b.jpg");
 }
 
 #menu-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 810px;
+}
+
+#about-body {
+  justify-content: center;
   align-items: center;
 }
 
@@ -112,10 +120,13 @@ p, .about-anchor {
 
 #index-subtitle {
   margin-top: 25px;
+  padding: 2px;
   font-size: 20px;
   color: rgb(0, 36, 0);
   font-weight: normal;
-  margin-bottom: 225px;
+  margin-bottom: 20vh;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
 #button-container {
@@ -131,14 +142,17 @@ p, .about-anchor {
   display: flex;
   flex-direction: row;
   width: 100%;
+  max-width: 95vw;
 }
 
 .button {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
   height: 50px;
   width: 100%;
+  max-width: 95vw;
   border-radius: 5px;
   background: #77AD78;
   opacity: 100%;
@@ -149,9 +163,15 @@ p, .about-anchor {
   border: none;
 }
 
+#form-text-container {
+  max-width: 700px;
+}
+
 .donate {
   margin: 10px;
+  padding: 5px;
   width: 90%;
+  max-width: 700px;
 }
 
 .button:hover {
@@ -258,17 +278,19 @@ label {
 
 .field {
   width: 90%;
+  max-width: 700px;
   height: 40px;
   margin: 10px;
+  padding: 7.5px;
   border: solid;
   border-width: 2px;
   border-radius: 5px;
   border-color: grey;
-  padding: 7.5px
 }
 
 #login-button {
   width: 89%;
+  max-width: 700px;
   height: 45px;
   margin: 10px;
   border: none;
@@ -277,10 +299,9 @@ label {
 
 #launch-button {
   width: 100%;
-  height: 45px;
+  height: 50px;
   margin: 10px;
   border: none;
-  font-size: 20px;
 }
 
 
@@ -290,70 +311,15 @@ label {
   height: 250x;
 }
 
-/* RESPONSIVE DESIGN */
-@media screen and (width > 500px) {
-  .button {
-    height: 75px;
-    width: 200px;
-    font-size: 30px;
-  }
-
-  label, input {
-    font-size: 30px;
-  }
-
-  input {
-    max-width: 300px;
-  }
-
-  h1 {
-    font-size: 65px;
-  }
-
-  #app-h1 {
-    font-size: 40px;
-  }
-
-  a {
-    font-size: 25px;
-  }
-
-  p, .about-anchor {
-    font-size: 22px;
-  }
-}
-
-@media screen and (width > 2000px) {
-  .button {
-    height: 100px;
-    width: 300px;
-    font-size: 50px;
-  }
-  label, input {
-    font-size: 50px;
-  }
-  input {
-    max-width: 400px;
-  }
-  h1 {
-    font-size: 100px;
-  }
-  a {
-    font-size: 40px;
-  }
-  p, .about-anchor {
-    font-size: 36px;
-  }
-}
-
 /* APP */
 #app-body {
   max-height: 100vh;
 }
 
-.app-container {
+.app-container, .big-control-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -374,12 +340,19 @@ label {
   justify-content: center;
   align-items: center;
   width: 90%;
+  max-width: 90vw;
 }
 
-#live-feed {
+#live-feed { 
+  /* For the alt text */
+  min-width: 100px;
+  min-height: 100px;
+  text-align: center;
+  /* Rest of styles */
   max-width: 528px;
-  max-height: 704px;
+  max-height: 50vh;
   max-width: 90vw;
+  color: white;
 }
 
 #movement-container {
@@ -480,19 +453,6 @@ label {
   margin: 5px;
 }
 
-/* RESPONSIVE DESIGN FOR APP */
-@media screen and (width > 600px) {
-  .app-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .text {
-    margin: 0;
-  }
-}
-
 /* https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable */
 /* Make controls in the remote controller unselectable */
 .unselectable {
@@ -509,4 +469,131 @@ label {
   margin-bottom: 15px;
 }
 
-/*TODO: OPTIMIZE FOR NOKIA 8110 4G */
+#donate-form {
+  height: 100%;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (width < 410px) {
+  h1 {
+    font-size: 36px;
+  }
+  #index-subtitle {
+    font-size: 18px;
+  }
+  #welcome-back {
+    font-size: 26px;
+  }
+}
+
+@media screen and (width < 370px) {
+  #index-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (width < 350px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (width < 340px) {
+  #index-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* https://stackoverflow.com/questions/6285279/i-need-a-max-margin-css-property-but-it-doesnt-exist-how-could-i-fake-it */
+@media screen and (height > 915px) {
+  #index-subtitle {
+    margin-bottom: 225px;
+  }
+}
+
+@media screen and (width > 600px) {
+  .field, #login-button {
+    max-width: 560px;
+  }
+}
+
+@media screen and (width > 1000px) {
+  .app-container {
+    flex-direction: row;
+  }
+  .texts-container {
+    width: 70px;
+  }
+}
+
+@media screen and (width > 1350px) {
+  #button-container {
+    width: 450px;
+    height: 150px;
+  }
+
+  #launch-button, #donate-button, #about-button {
+    height: 60px;
+    font-size: 26px;
+  }
+  .about-menu {
+    max-width: 700px;
+  }
+}
+
+@media screen and (width > 2000px) {
+  #button-container {
+    width: 650px;
+    height: 200px;
+  }
+
+  #launch-button, #donate-button, #about-button {
+    height: 75px;
+    font-size: 36px;
+    border-radius: 10px;
+    box-shadow: 0 7px 0 0 rgb(0 0 0 / 50%);
+  }
+
+  h1 {
+    font-size: 75px;
+  }
+
+  #index-subtitle {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 56px;
+  }
+
+  p:not(.about-paragraph), #github-link, label {
+    font-size: 28px;
+    margin: 5px;
+  }
+
+  .field, #login-button {
+    max-width: 800px;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  #navigation a {
+    font-size: 24px;
+  }
+
+  .texts-container {
+    width: 100px;
+  }
+}
+
+@media screen and (width > 3000px) {
+  .about-menu {
+    max-width: 1000px;
+  }
+  .about-paragraph {
+    font-size: 20px;
+  }
+}
+
+/* TODO: OPTIMIZE FOR NOKIA 8110 4G */
