@@ -2,8 +2,23 @@
 
 ## Robot telecomandat pentru gestionarea acumulărilor de deșeuri
 
-**PET Grabber** este un robot conceput pentru soluționarea problemei gunoaielor. Acesta este manevrat de pe site-ul [pet-grabber.web.app](https://pet-grabber.web.app), proiectat pentru toate platformele, cu ajutorul unei interfețe intuitive. Proiectul are mai multe componente:
+**PET Grabber** este un robot conceput pentru soluționarea problemei gunoaielor. Acesta este manevrat de pe site-ul [pet-grabber.web.app](https://pet-grabber.web.app), proiectat pentru toate platformele, cu ajutorul unei interfețe intuitive. Proiectul are mai multe elemente:
 
 * Site-ul **PET Grabber** este făcut în HTML, CSS și Vanilla JS, este găzduit pe [Firebase](https://firebase.google.com/), o suită de unelte pentru dezvoltarea aplicațiilor web, iar autentificarea și stocarea datelor se fac prin același serviciu (Firebase Authentication și Firebase Realtime Database).
-* Odată autentificat, utilizatorul are acces la live stream-ul de la Pi Camera, realizat printr-un server Flask pe `localhost:5000` ([`stream.py`](https://github.com/pet-grabber/pet-grabber/tree/main/robot/stream.py)). Acest server este expus în siguranță pe Internet prin intermediul unui [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/), o conexiune similară unui VPN, fără a deschide porturi în rețea. Astfel, se obține un URL cu stream-ul, care este deschis pe site.
+![Pagina principală a site-ului PET Grabber](/images/01.png)
+* Odată autentificat, utilizatorul are acces la live stream-ul de la Pi Camera, realizat printr-un server Flask pe `localhost:5000` ([`stream.py`](/robot/stream.py)). Acest server este expus în siguranță pe Internet prin intermediul unui [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/), o conexiune similară unui VPN, care nu necesită porturi în rețea. Astfel, se obține un URL cu stream-ul, care este deschis pe site.
+![Pagina de remote control a site-ului PET Grabber](/images/02.png)
+* De pe site, utilizatorul trimite comenzi, care sunt stocate în timp real în baza de date Firebase. [Codul de pe Raspberry Pi](/robot/cod_raspberry.py) monitorează schimbările din baza de date și trimite controalele introduse de utilizator la un Arduino UNO printr-o conexiune serial.
+* Robotul este construit din plăci OSB tăiate manual, pe care sunt plasate componentele. Placa de dezvoltare [Arduino UNO](https://docs.arduino.cc/hardware/uno-rev3/) controlează atât motoarele de la roți, cât și servomotoarele de la brațul robotic și cleștele. 
+* Cele [patru roți cu spumă](https://sigmanortec.ro/set-4-roti-din-spuma-rc-67x26-et3) sunt acționate de [4 motoare DC N20](https://www.bitmi.ro/electronica/micromotor-cu-reductie-n20-dc-3-6v-120rpm-10689.html), care sunt controlate de două drivere de motoare [L298N](https://www.emag.ro/modul-driver-motoare-l298n-compatibil-arduino-tri434/pd/DXK3ZQBBM/), care primesc comenzi de la Arduino.
+* Cele trei servomotoare [MG996R](https://sigmanortec.ro/servomotor-mg996r-180-13kg) sunt ocnectate la un modul [PCA9685](https://www.emag.ro/placa-dezvoltare-general-pca9685-16-canale-pwm-12-biti-interfata-iic-alimentare-dc5-10v-gd-0015/pd/DDPYV8YBM/), care primește comenzi de la Arduino prin [interfața I2C](https://en.wikipedia.org/wiki/I%C2%B2C).
+* Modulul PCA9865 și cele două drivere de motoare L298N sunt alimentate de 3 baterii [18650](https://www.emag.ro/acumulator-samsung-18650-li-ion-3-7v-25r-curent-maxim-de-descarcare-20a-pentru-dispozitive-electronice-boxe-portabile-tigari-electronice-si-alte-dispozitive-r031100mahbp2/pd/D1WR13BBM/) (cu o tensiune nominală de 3,7V, o capacitate de 2500 mAh și un curent maxim de descărcare continuă de 20A), montate într-un suport, a căror tensiune este redusă la 6V cu ajutorului unui [XL4016](https://www.emag.ro/convertor-descendente-xl4016-1-25-36v-8a-dc-dc-cu-voltmetru-multicolor-step-down-xl4016-disp/pd/DQW798MBM/), filtrat suplimentar cu ajutorul a două condensatoare: [unul electrolitic de 1000 μF/10V](https://www.emag.ro/condensator-electrolitic-1000uf-10v-dc-105-c-elite-pf1a102mnn1016-t128660/pd/D40717MBM/) pentru amortizarea vârfurilor de curent și [unul ceramic de 0.1 μF/50V](https://www.emag.ro/condensator-ceramic-0-1uf-50v-x7r-vishay-k104k10x7rf5uh5-t275622/pd/DY9D7KYBM/) pentru reducerea zgomotului de înaltă frecvență.
+* În cazul driverelor de motoare, tensiunea este stabilizată cu încă un modul XL4016.
 * 
+
+## Lista componentelor
+### Electronică
+### Mecanică
+
+## Imagini și videoclipuri
+
