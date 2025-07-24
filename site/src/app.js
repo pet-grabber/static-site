@@ -13,6 +13,8 @@ if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
 
 if (mode === "mobile") {
   document.getElementById("wasd").style.display = "none";
+} else if (mode === "pc") {
+  document.getElementById("movement-container").style.display = "none";
 }
 
 onAuthStateChanged(auth, user => {
