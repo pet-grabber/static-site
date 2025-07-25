@@ -77,7 +77,7 @@ Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotu
 
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
 
-[![Video Title](https://img.youtube.com/vi/8Qcqwyrg67M/0.jpg)](https://www.youtube.com/watch?v=8Qcqwyrg67M)
+
 
 ## Tutoriale
 - [No Bullsh*t Guide to Making Modern Websites](https://www.youtube.com/watch?v=WAV66F-Zbio)
