@@ -51,7 +51,13 @@
 
 Brațul robotic (care are acum 2 grade de librtate) poate fi modificat pentru a i se adăuga mai multe grade de libertate, atât la baza cilindrică de OSB, care s-ar putea roti (1 grad de libertate), cât și în zona cleștelui, care s-ar putea roti pe toate cele trei axe (X, Y, Z), față-spate, stânga-dreapta și în sensul acelor de ceasornic sau invers (3 grade de libertate), pentru un total de **6 grade de libertate**.
 
-### 
+### Introducerea AI
+
+O evoluție extrem de importantă o poate constitui introducerea unui model de recunoaștere a obiectelor, precum [YOLOv5](https://github.com/ultralytics/yolov5) sau o versiune mai nouă, antrenat special pe detectarea gunoaielor. Acest model ar putea fi rulat pe Raspberry Pi alături de un model de detectare a distanței față de obiecte, precum [ml-depth-pro](https://github.com/apple/ml-depth-pro), dezvoltat de Apple.
+
+![Model de detectare a gunoaielor rulat pe o imagine cu câteva gunoaie pe jos](/images/08.jpg)
+
+În funcție de aceste informații și folosindu-ne de [inverse kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics) pentru a determina poziția fiecărei componente a brațului robotic, putem transforma PET Grabber dintr-un robot telecomandat într-unul autonom, programându-l să se deplaseze singur la gunoaie, să le ridice și să le depoziteze în coșul de gunoi.
 
 ## Probleme cunoscute
 
