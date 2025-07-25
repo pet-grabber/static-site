@@ -69,7 +69,6 @@ Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotu
 
 ## Imagini și videoclipuri
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
-
-<video controls src="/videos/01.mp4" title="Video of Pet Grabber going forward and backward on the floor"></video>
+<video controls src="videos/01.mp4" title="PET Grabber merge în față și în spate pe podea"></video>
 
 ## Credite
