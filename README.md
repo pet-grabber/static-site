@@ -61,12 +61,15 @@ O evoluție extrem de importantă o poate constitui introducerea unui model de r
 
 ### Materiale
 
-De asemenea, voi fi confecționat din materiale și componentele mai bune pentru a fi mai rezistent, chiar și în condiții mai dificile, cleștele meu va fi confecționat din PLA (biodegrabail) și roțile vor fi mai mari pentru stabilitate.
+De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite, poate chiar modelat în CAD și printat 3D, iar cleștele ar putea fi confecționat din PLA, care este biodegradabil, în loc de ABS, cum este acum.
 
-## Probleme cunoscute
+### Roți mai mari
+
+Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotului.
 
 ## Imagini și videoclipuri
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
-Video cu robotul
+
+<video controls src="/videos/01.mp4" title="Video of Pet Grabber going forward and backward on the floor"></video>
 
 ## Credite
