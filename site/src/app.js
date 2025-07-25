@@ -135,7 +135,6 @@ function gripFunction() {
 }
 
 function writeUserData(directie, umar, brat, cleste) {
-  console.log(direction);
   if (directie === undefined) directie = null;
   if (umar === undefined) umar = null;
   if (brat === undefined) brat = null;
