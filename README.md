@@ -28,6 +28,7 @@
 * ABS pentru cleștele robotului
 
 ### Electronică
+
 - Raspberry Pi 4, 4GB
 - Arduino UNO
 - 2 drivere de motoare L298N (care controlează motoarele DC)
@@ -39,6 +40,7 @@
   - 1 condensator ceramic 0.1 μF/50V
 
 ### Mecanică
+
 - 4 roți cu spumă
 - 4 motoare DC N20
 - 3 servomotoare MG996R
