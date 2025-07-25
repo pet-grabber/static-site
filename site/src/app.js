@@ -143,7 +143,7 @@ function writeUserData(directie, umar, brat, cleste) {
   set(ref(database, 'commands/'), {
     directie: directie,
     umar: Number(umar),
-    brat: Number(brat),
+    brat: Number(180 - brat),
     cleste: cleste
   });
   document.getElementById("test-text").innerHTML = direction;
