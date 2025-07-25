@@ -37,6 +37,10 @@ TODO
 ## Perspective de viitor
 Ia din prezentare
 
+## Probleme cunoscute
+
 ## Imagini și videoclipuri
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
 Video cu robotul
+
+## Credite
