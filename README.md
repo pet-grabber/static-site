@@ -46,7 +46,12 @@
 - 3 servomotoare MG996R
 
 ## Perspective de viitor
-Ia din prezentare
+
+### Dezvoltarea unui braț mai avansat
+
+Brațul robotic (care are acum 2 grade de librtate) poate fi modificat pentru a i se adăuga mai multe grade de libertate, atât la baza cilindrică de OSB, care s-ar putea roti (1 grad de libertate), cât și în zona cleștelui, care s-ar putea roti pe toate cele trei axe (X, Y, Z), față-spate, stânga-dreapta și în sensul acelor de ceasornic sau invers (3 grade de libertate), pentru un total de **6 grade de libertate**.
+
+### 
 
 ## Probleme cunoscute
 
