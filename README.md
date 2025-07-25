@@ -59,7 +59,9 @@ O evoluție extrem de importantă o poate constitui introducerea unui model de r
 
 În funcție de aceste informații și folosindu-ne de [inverse kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics) pentru a determina poziția fiecărei componente a brațului robotic, putem transforma PET Grabber dintr-un robot telecomandat într-unul autonom, programându-l să se deplaseze singur la gunoaie, să le ridice și să le depoziteze în coșul de gunoi.
 
-###
+### Materiale
+
+De asemenea, voi fi confecționat din materiale și componentele mai bune pentru a fi mai rezistent, chiar și în condiții mai dificile, cleștele meu va fi confecționat din PLA (biodegrabail) și roțile vor fi mai mari pentru stabilitate.
 
 ## Probleme cunoscute
 
