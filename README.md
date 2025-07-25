@@ -77,7 +77,10 @@ Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotu
 
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
 
+![PET Grabber merge în față și în spate](https://pouch.jumpshare.com/preview/NYnki9dxccLx6Bs1PPf76v7KxpWWnX2SNzj2oUtCs9fwljwsnfAF1cG-kmiSaMeIFz7t5nMdDMD4uY0VTCGnPQDtD42k84wLIYqvKC0FhrM)
 
+
+![PET Grabber ia o cutie de Raspberry Pi de pe jos și o depozitează](https://pouch.jumpshare.com/preview/kg5sDdfajPv8pzOL5yC32NLcjEtmen9e2-JUrODQY981Q8zvlWOjpVm-SfF76jG4Fz7t5nMdDMD4uY0VTCGnPcYMFPrGiu4BZc4l0t4I7Ec)
 
 ## Tutoriale
 - [No Bullsh*t Guide to Making Modern Websites](https://www.youtube.com/watch?v=WAV66F-Zbio)
