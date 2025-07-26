@@ -79,7 +79,9 @@ De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite
 
 Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotului.
 
-### 
+### Modem
+
+PET Grabber ar putea beneficia de adăugarea unui modem LTE/5G cu SIM pentru a avea internet în orice locație.
 
 ## Imagini și videoclipuri
 
