@@ -82,7 +82,7 @@ O evoluție extrem de importantă o poate constitui introducerea unui model de r
 
 ### Materiale
 
-De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite, poate chiar modelat în CAD și printat 3D, iar cleștele ar putea fi confecționat din PLA, care este biodegradabil, în loc de ABS, cum este acum.
+De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite, iar **baza și brațul pot fi modelate în CAD și printate 3D**, iar cleștele ar putea fi confecționat din PLA, care este biodegradabil, în loc de ABS, cum este acum.
 
 ### Roți mai mari
 
