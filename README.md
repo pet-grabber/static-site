@@ -138,3 +138,4 @@ PET Grabber ar putea beneficia de adăugarea unui modem LTE/5G cu SIM pentru a a
 - [Power For Your Electronics Projects - Voltage Regulators and Converters](https://www.youtube.com/watch?v=IT19dg73nKU)
 - [LM2596 DC-DC Buck Converter Explained | DC-DC Step Down Converter Module | LM2596 Voltage Regulator](https://www.youtube.com/watch?v=DXM_xiR0o1c)
 - [How does Buck Converter work? | DC-DC Converter - 1](https://www.youtube.com/watch?v=W6NOV6b8kxs)
+- [GitHub Tricks Demo Your software Application | Add video in GitHub readme file | Web Development](https://www.youtube.com/watch?v=clnpIjp5r88)
