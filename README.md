@@ -105,7 +105,11 @@ PET Grabber ar putea beneficia de adăugarea unui modem LTE/5G cu SIM pentru a a
 
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
 
-![PetGrabber 1](https://github.com/user-attachments/assets/1ce48c02-1b7f-453f-904f-151ed62d85fd)
+![Video 1](https://github.com/user-attachments/assets/1ce48c02-1b7f-453f-904f-151ed62d85fd)
+
+![Video 2](https://github.com/user-attachments/assets/d979ede4-376f-4371-a5c4-a33911924110)
+
+![Video 3](https://github.com/user-attachments/assets/f118b99b-2feb-4af8-bccb-8cd68bc03f54)
 
 ## Tutoriale
 
