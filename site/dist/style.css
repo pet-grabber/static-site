@@ -350,7 +350,7 @@ label {
   text-align: center;
   /* Rest of styles */
   max-width: 528px;
-  max-height: 40vh;
+  max-height: 45vh;
   max-width: 90vw;
   color: white;
 }
@@ -479,10 +479,12 @@ label {
 }
 
 /* ADS */
+/* 320 x 50 is apparently a popular format for mobile banner ads */
 .ad-container {
   display: flex;
   width: 320px;
   height: 50px;
+  margin-top: 15px;
   border: red solid;
   color: white;
 }
