@@ -4,12 +4,17 @@
 
 **PET Grabber** este un robot conceput pentru soluționarea problemei gunoaielor. Acesta este manevrat de pe site-ul [pet-grabber.web.app](https://pet-grabber.web.app), cu ajutorul unei interfețe intuitive, proiectate pentru toate platformele. Proiectul are mai multe elemente:
 
-* Site-ul **PET Grabber** este făcut în HTML, CSS și Vanilla JS, este găzduit pe [Firebase](https://firebase.google.com/), o suită de unelte pentru dezvoltarea aplicațiilor web, iar autentificarea și stocarea datelor se fac prin același serviciu (Firebase Authentication și Firebase Realtime Database).
+* Site-ul **PET Grabber** este făcut în HTML, CSS și Vanilla JS, este găzduit pe [Firebase](https://firebase.google.com/), o suită de unelte pentru dezvoltarea aplicațiilor web, iar autentificarea și stocarea datelor se fac prin același serviciu (Firebase Authentication și Firebase Realtime Database). Site-ul este optimizat pentru toate platformele (telefon, tabletă, calculator).
 
 ![Pagina principală a site-ului PET Grabber](/images/01.png)
-* Odată autentificat, utilizatorul are acces la live stream-ul de la Pi Camera, realizat printr-un server Flask pe `localhost:5000` ([`stream.py`](/robot/stream.py)). Acest server este expus în siguranță pe Internet prin intermediul unui [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/), o conexiune similară unui VPN, care nu necesită porturi în rețea. Astfel, se obține un URL cu stream-ul, care este deschis pe site.
+* Odată autentificat, utilizatorul are acces la live stream-ul de la Pi Camera, realizat printr-un server Flask pe `localhost:5000` ([`stream.py`](/robot/stream.py)). Acest server este expus în siguranță pe Internet prin intermediul unui [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/), o conexiune similară unui VPN, care nu necesită porturi în rețea. Astfel, se obține un URL cu stream-ul, care este deschis pe site. 
 
-![Pagina de remote control a site-ului PET Grabber](/images/02.png)
+![Pagina de remote control a site-ului PET Grabber](/images/09.png)
+
+* În același timp, aplicația afișează reclame ale căror venituri pot fi donate la ONG-ul de mediu ales.
+
+![Pagina de donație a site-ului PET Grabber](/images/10.png)
+
 * De pe site, utilizatorul trimite comenzi, care sunt stocate în timp real în baza de date Firebase. [Codul de pe Raspberry Pi](/robot/cod_raspberry.py) monitorează schimbările din baza de date și trimite controalele introduse de utilizator la un Arduino UNO printr-o conexiune serial.
 * Robotul este construit din plăci [OSB](https://ro.wikipedia.org/wiki/OSB) tăiate manual, pe care sunt plasate componentele. Placa de dezvoltare [Arduino UNO](https://docs.arduino.cc/hardware/uno-rev3/) controlează atât motoarele de la roți, cât și servomotoarele de la brațul robotic și cleștele. 
 
@@ -32,8 +37,12 @@
 
 ### Materiale
 
-* OSB pentru bază și braț; baza este parțial învelită în folie autocolantă de culoare maro
-* ABS pentru cleștele robotului
+- OSB pentru bază și braț; baza este parțial învelită în folie autocolantă de culoare maro
+- ABS pentru cleștele robotului
+
+### Senzori
+
+- Raspberry Pi Camera
 
 ### Electronică
 
@@ -66,7 +75,7 @@ Acum, utilizatorul nu poate vedea în spate prin cameră când depozitează guno
 
 ### Dezvoltarea unui braț mai avansat
 
-Brațul robotic (care are acum 2 grade de librtate) poate fi modificat pentru a i se adăuga mai multe grade de libertate, atât la baza cilindrică de OSB, care s-ar putea roti (1 grad de libertate), cât și în zona cleștelui, care s-ar putea roti pe toate cele trei axe (X, Y, Z) (3 grade de libertate), pentru un total de **6 grade de libertate**.
+Brațul robotic (care are acum 2 grade de libertate) poate fi modificat pentru a i se adăuga mai multe grade de libertate, atât la baza cilindrică de OSB, care s-ar putea roti (1 grad de libertate), cât și în zona cleștelui, care s-ar putea roti pe toate cele trei axe (X, Y, Z) (3 grade de libertate), pentru un total de **6 grade de libertate**.
 
 ### Introducerea AI
 
@@ -78,7 +87,7 @@ O evoluție extrem de importantă o poate constitui introducerea unui model de r
 
 ### Materiale
 
-De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite, poate chiar modelat în CAD și printat 3D, iar cleștele ar putea fi confecționat din PLA, care este biodegradabil, în loc de ABS, cum este acum.
+De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite, iar **baza și brațul pot fi modelate în CAD și printate 3D**, iar cleștele ar putea fi confecționat din PLA, care este biodegradabil, în loc de ABS, cum este acum.
 
 ### Roți mai mari
 
