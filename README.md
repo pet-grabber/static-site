@@ -85,6 +85,7 @@ Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotu
 ![PET Grabber ia o cutie de Raspberry Pi de pe jos și o depozitează](https://pouch.jumpshare.com/preview/kg5sDdfajPv8pzOL5yC32NLcjEtmen9e2-JUrODQY981Q8zvlWOjpVm-SfF76jG4Fz7t5nMdDMD4uY0VTCGnPcYMFPrGiu4BZc4l0t4I7Ec)
 
 ## Tutoriale
+
 - [No Bullsh*t Guide to Making Modern Websites](https://www.youtube.com/watch?v=WAV66F-Zbio)
 - [Arduino IDE: Install Arduino IDE on Linux](https://www.youtube.com/watch?v=eelTpgfa4Y8)
 - [Camera Module with Raspberry Pi4](https://www.youtube.com/watch?v=0hrF8Wq8SS)
