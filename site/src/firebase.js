@@ -26,7 +26,7 @@ const auth = getAuth(firebaseApp);
 const database = getDatabase(firebaseApp);
 
 // connectAuthEmulator(auth, "http://localhost:9099");
-// connectDatabaseEmulator(database, "localhost", 9000);
+connectDatabaseEmulator(database, "localhost", 9000);
 
 setPersistence(auth, browserSessionPersistence);
 
