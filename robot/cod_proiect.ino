@@ -1,8 +1,7 @@
-#include <Servo.h>
+#include <Wire.h>
+#include <Adafruit_PWMServoDriver.h>
 
-Servo cleste;
-Servo brat;
-Servo umar;
+Adafruit_PWMServoDriver PCA9865 = Adafruit_PWMServoDriver();
 
 #define fENA 5//speed fA
 #define fENB 3//speed fB
@@ -23,7 +22,12 @@ String command;
 int speed = 255;
 int gbrat = 90;
 int gumar = 90;
+  byte cleste = 2;
+  byte brat = 0;
+  byte umar = 1;
 
+void setServotoAngleSmooth(byte servo, int toAngle, int lastAngle);
+void setServotoAngle(byte servo, int angle);
 void forward(int speed);
 void backward(int speed);
 void forward_right(int speed);
@@ -49,13 +53,12 @@ void setup() {
   pinMode(rIN3, OUTPUT);
   pinMode(rIN4, OUTPUT);
 
-  cleste.attach(A5);
-  brat.attach(A4);
-  umar.attach(A3);
+  PCA9865.begin();
+  PCA9865.setPWMFreq(60);
 
-  cleste.write(0);
-  brat.write(gbrat);
-  umar.write(gumar);
+  setServotoAngle(cleste, 0);
+  setServotoAngle(brat, gbrat);
+  setServotoAngle(umar, gumar);
 }
 
 void loop() {
@@ -83,43 +86,43 @@ void loop() {
       String w = Serial.readStringUntil('\n');
       w.trim();
       if(w == "True"){
-        cleste.write(180);
+        setServotoAngle(cleste, 180);
       }else if(w == "False"){
-        cleste.write(0);
+        setServotoAngle(cleste, 0);
       }
     }else if(command.equals("brat")){
       String x = Serial.readStringUntil('\n');
       x.trim();
       if (x.length() == 0) {
-        Serial.println("ERROR: No angle given for brat");
+        //Serial.println("ERROR: No angle given for brat");
       }else{
         int lastgbrat = gbrat;
         gbrat = x.toInt();
         /*int step = (gbrat > lastgbrat) ? 1 : -1;
         for (int i = lastgbrat; i != gbrat; i += step) {
-          brat.write(i);
+          setServotoAngle(brat, i);
           delay(10);
         }*/
-        brat.write(gbrat);
+        setServotoAngleSmooth(brat, gbrat, lastgbrat);
       }
     }else if(command.equals("umar")){
       String y = Serial.readStringUntil('\n');
       y.trim();
       if (y.length() == 0) {
-        Serial.println("ERROR: No angle given for umar");
+        //Serial.println("ERROR: No angle given for umar");
       }else{
         int lastgumar = gumar;
         gumar = y.toInt();
         /*int step = (gumar >lastgumar) ? 1 : -1;
         for (int i= lastgumar; i!= gumar; i+= step){
-          umar.write(i);
+          setServotoAngle(umar, i);
           delay(10);
         }*/
-        umar.write(gumar);
+        setServotoAngleSmooth(umar, gumar, lastgumar);
       }
     }else{
-      Serial.println("ERROR: Command not found -> ");
-      Serial.println(command);
+      //Serial.println("ERROR: Command not found -> ");
+      //Serial.println(command);
     }
   }
   
@@ -236,4 +239,29 @@ void stop(){
   digitalWrite(rIN2, LOW);
   digitalWrite(rIN3, LOW);
   digitalWrite(rIN4, LOW);
+}
+
+void setServotoAngleSmooth(byte servo, int toAngle, int lastAngle) {
+  int steps = abs(toAngle - lastAngle);
+  if (steps == 0) return;
+
+  float t = 0.0;
+  float dt = 1.0 / steps;
+
+  for (int i = 0; i <= steps; i++) {
+    // easing-out cubic y = 1 - pow(1-t, 3)
+    float eased = 1 - pow(1 - t, 3);
+    int currentAngle = lastAngle + (toAngle - lastAngle) * eased;
+
+    int pwmpulse = map(currentAngle, 0, 180, 150, 600); //servomin si servomax
+    PCA9865.setPWM(servo, 0, pwmpulse);
+
+    delay(5); // mai rapid sau mai lent
+    t += dt;
+  }
+}
+
+void setServotoAngle(byte servo, int angle){
+  int pwmpulse = map(angle, 0, 180, 150, 600); //servomin si servomax daca nu sunt puse bine byebye servo o7
+  PCA9865.setPWM(servo, 0, pwmpulse);
 }
