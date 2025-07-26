@@ -26,6 +26,8 @@
 
 ![Cleștele robotului PET Grabber](images/07.JPEG)
 
+### Găsiți detalii și în [prezentarea](./Prezentare.pdf) proiectului!
+
 ## Lista componentelor
 
 ### Materiale
