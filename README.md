@@ -110,6 +110,8 @@ PET Grabber ar putea beneficia de adăugarea unui modem LTE/5G cu SIM pentru a a
 
 ![PET Grabber ia o cutie de Raspberry Pi de pe jos și o depozitează](https://pouch.jumpshare.com/preview/kg5sDdfajPv8pzOL5yC32NLcjEtmen9e2-JUrODQY981Q8zvlWOjpVm-SfF76jG4Fz7t5nMdDMD4uY0VTCGnPcYMFPrGiu4BZc4l0t4I7Ec)
 
+![PET Grabber se plimbă pe podea](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzJxZ3c0bmRteDRmNmF2a3p0eXg2aDF0MDhvd3E2azA2NnlmY25paCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ar5RN5BVe6RC5R0H8x/giphy.gif)
+
 ## Tutoriale
 
 - [No Bullsh*t Guide to Making Modern Websites](https://www.youtube.com/watch?v=WAV66F-Zbio)
