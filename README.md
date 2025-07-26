@@ -55,7 +55,12 @@
 
 ## Probleme cunoscute
 ### Viteza internetului
+
 Raspberry Pi-ul necesită o viteză a internetului de cel puțin ~15 Mbps pentru a putea transmite live stream-ul. Viteza de la hotspot-ul unui telefon este adesea insuficientă pentru live stream.
+
+### Câmpul vizual al camerei
+
+Acum, utilizatorul nu poate vedea în spate prin cameră când depozitează gunoiul. Această problemă ar putea fi rezolvată prin adăugarea unui servomotor care să rotească camera în funcție de o comandă dată de utilizator.
 
 ## Perspective de viitor
 
