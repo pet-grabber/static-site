@@ -629,4 +629,17 @@ label {
   }
 }
 
+@media screen and (width > 600px) and (height > 1000px) {
+  .ad-container {
+    width: 480px;
+    height: 60px;
+  }
+}
+
+@media screen and (width > 1000px) and (height > 750px) {
+  .ad-container {
+    display: none;
+  }
+}
+
 /* TODO: OPTIMIZE FOR NOKIA 8110 4G */
