@@ -32,8 +32,12 @@
 
 ### Materiale
 
-* OSB pentru bază și braț; baza este parțial învelită în folie autocolantă de culoare maro
-* ABS pentru cleștele robotului
+- OSB pentru bază și braț; baza este parțial învelită în folie autocolantă de culoare maro
+- ABS pentru cleștele robotului
+
+### Senzori
+
+- Raspberry Pi Camera
 
 ### Electronică
 
