@@ -146,7 +146,7 @@ function writeUserData(directie, umar, brat, cleste) {
     brat: Number(180 - brat),
     cleste: cleste
   });
-  document.getElementById("test-text").innerHTML = direction;
+  // document.getElementById("test-text").innerHTML = direction;
 }
 
 /* https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function */
