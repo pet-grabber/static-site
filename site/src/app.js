@@ -19,7 +19,7 @@ if (mode === "mobile") {
 
 onAuthStateChanged(auth, user => {
   if (user) {
-    document.body.style.display = 'block';
+    document.body.style.display = 'flex';
   } else {
     window.location.href = "/login.html";
   }

@@ -313,6 +313,10 @@ label {
 
 /* APP */
 #app-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-height: 100vh;
 }
 
@@ -484,7 +488,7 @@ label {
 
 /* ADS */
 /* 320 x 50 is apparently a popular format for mobile banner ads */
-.ad-container {
+.ad-container-1 {
   display: flex;
   width: 320px;
   height: 50px;
@@ -493,10 +497,9 @@ label {
   color: white;
 }
 
-.ad-box p {
-  color: white;
+.ad-container-2 {
+  display: none;
 }
-
 
 /* RESPONSIVE DESIGN */
 @media screen and (width < 410px) {
@@ -630,15 +633,23 @@ label {
 }
 
 @media screen and (width > 600px) and (height > 1000px) {
-  .ad-container {
+  .ad-container-1 {
     width: 480px;
     height: 60px;
   }
 }
 
 @media screen and (width > 1000px) and (height > 750px) {
-  .ad-container {
+  .ad-container-1 {
     display: none;
+  }
+  .ad-container-2 {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    color: white;
+    border: red solid;
   }
 }
 
