@@ -53,6 +53,10 @@
 - 4 motoare DC N20
 - 3 servomotoare MG996R
 
+## Probleme cunoscute
+### Viteza internetului
+Raspberry Pi-ul necesită o viteză a internetului de cel puțin ~15 Mbps pentru a putea transmite live stream-ul. Viteza de la hotspot-ul unui telefon este adesea insuficientă pentru live stream.
+
 ## Perspective de viitor
 
 ### Dezvoltarea unui braț mai avansat
@@ -74,6 +78,8 @@ De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite
 ### Roți mai mari
 
 Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotului.
+
+### 
 
 ## Imagini și videoclipuri
 
