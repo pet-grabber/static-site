@@ -478,6 +478,19 @@ label {
   height: 100%;
 }
 
+/* ADS */
+.ad-container {
+  display: flex;
+  width: 320px;
+  height: 50px;
+  border: red solid;
+  color: white;
+}
+
+.ad-box p {
+  color: white;
+}
+
 
 /* RESPONSIVE DESIGN */
 @media screen and (width < 410px) {
