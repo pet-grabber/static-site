@@ -66,7 +66,7 @@ Acum, utilizatorul nu poate vedea în spate prin cameră când depozitează guno
 
 ### Dezvoltarea unui braț mai avansat
 
-Brațul robotic (care are acum 2 grade de librtate) poate fi modificat pentru a i se adăuga mai multe grade de libertate, atât la baza cilindrică de OSB, care s-ar putea roti (1 grad de libertate), cât și în zona cleștelui, care s-ar putea roti pe toate cele trei axe (X, Y, Z) (3 grade de libertate), pentru un total de **6 grade de libertate**.
+Brațul robotic (care are acum 2 grade de libertate) poate fi modificat pentru a i se adăuga mai multe grade de libertate, atât la baza cilindrică de OSB, care s-ar putea roti (1 grad de libertate), cât și în zona cleștelui, care s-ar putea roti pe toate cele trei axe (X, Y, Z) (3 grade de libertate), pentru un total de **6 grade de libertate**.
 
 ### Introducerea AI
 
