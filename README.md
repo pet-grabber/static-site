@@ -124,11 +124,11 @@ Un pas relevant în dezvoltarea robotului și operării sale în medii necunoscu
 
 ![PET Grabber din spate](images/15.JPEG)
 
-![Video 1](https://github.com/user-attachments/assets/1ce48c02-1b7f-453f-904f-151ed62d85fd)
+https://github.com/user-attachments/assets/8d8b00f8-da80-445e-837b-0d51e4eb0478
 
-![Video 2](https://github.com/user-attachments/assets/d979ede4-376f-4371-a5c4-a33911924110)
+https://github.com/user-attachments/assets/f79d1a63-256b-4920-af9b-c81e0bb7df9d
 
-![Video 3](https://github.com/user-attachments/assets/f118b99b-2feb-4af8-bccb-8cd68bc03f54)
+https://github.com/user-attachments/assets/a4e0289a-28e5-451b-801d-b1837b615883
 
 ## Tutoriale
 
