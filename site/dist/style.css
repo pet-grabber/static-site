@@ -501,6 +501,11 @@ label {
   display: none;
 }
 
+/* Navbar */
+.navigation a {
+  margin: 0 5px;
+}
+
 /* RESPONSIVE DESIGN */
 @media screen and (width < 410px) {
   h1 {
