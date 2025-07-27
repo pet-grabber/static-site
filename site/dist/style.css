@@ -154,7 +154,7 @@ p, .about-anchor {
   width: 100%;
   max-width: 95vw;
   border-radius: 5px;
-  background: #77AD78;
+  background: #508150;
   opacity: 100%;
   color: white;
   text-decoration: none;
@@ -175,11 +175,11 @@ p, .about-anchor {
 }
 
 .button:hover {
-  background: #7DBA84;
+  background: #669766;
 }
 
 .button:active {
-  background: #8FD694;
+  background: #77a877;
 }
 
 #login-button {
