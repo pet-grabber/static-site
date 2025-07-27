@@ -614,6 +614,14 @@ label {
     font-size: 32px;
   }
 
+  .welcome-back h3 {
+    font-size: 24px;
+  }
+
+  .welcome-back h2 {
+    font-size: 36px;
+  }
+
   #navigation a {
     font-size: 24px;
   }
