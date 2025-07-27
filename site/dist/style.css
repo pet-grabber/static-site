@@ -243,10 +243,6 @@ p, .about-anchor {
   font-weight: normal;
 }
 
-#welcome-back {
-  font-size: 30px;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -276,10 +272,22 @@ label {
   margin-right: 5px;
 }
 
-.field {
+.field, .welcome-back {
   width: 90%;
   max-width: 700px;
-  height: 40px;
+}
+
+.welcome-back h3 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.welcome-back h2 {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.field {
   margin: 10px;
   padding: 7.5px;
   border: solid;
@@ -514,9 +522,6 @@ label {
   #index-subtitle {
     font-size: 18px;
   }
-  #welcome-back {
-    font-size: 26px;
-  }
 }
 
 @media screen and (width < 370px) {
@@ -545,7 +550,7 @@ label {
 }
 
 @media screen and (width > 600px) {
-  .field, #login-button {
+  .field, #login-button, .welcome-back {
     max-width: 560px;
   }
 }
@@ -604,10 +609,17 @@ label {
     margin: 5px;
   }
 
-  .field, #login-button {
+  .field, #login-button, .welcome-back {
     max-width: 800px;
-    height: 60px;
     font-size: 32px;
+  }
+
+  .welcome-back h3 {
+    font-size: 24px;
+  }
+
+  .welcome-back h2 {
+    font-size: 36px;
   }
 
   #navigation a {
