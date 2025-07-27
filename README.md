@@ -124,11 +124,11 @@ Un pas relevant în dezvoltarea robotului și operării sale în medii necunoscu
 
 ![PET Grabber din spate](images/15.JPEG)
 
-![Video 1](https://github.com/user-attachments/assets/1ce48c02-1b7f-453f-904f-151ed62d85fd)
+https://github.com/user-attachments/assets/8d8b00f8-da80-445e-837b-0d51e4eb0478
 
-![Video 2](https://github.com/user-attachments/assets/d979ede4-376f-4371-a5c4-a33911924110)
+https://github.com/user-attachments/assets/f79d1a63-256b-4920-af9b-c81e0bb7df9d
 
-![Video 3](https://github.com/user-attachments/assets/f118b99b-2feb-4af8-bccb-8cd68bc03f54)
+https://github.com/user-attachments/assets/a4e0289a-28e5-451b-801d-b1837b615883
 
 ## Tutoriale
 
@@ -158,3 +158,4 @@ Un pas relevant în dezvoltarea robotului și operării sale în medii necunoscu
 - [LM2596 DC-DC Buck Converter Explained | DC-DC Step Down Converter Module | LM2596 Voltage Regulator](https://www.youtube.com/watch?v=DXM_xiR0o1c)
 - [How does Buck Converter work? | DC-DC Converter - 1](https://www.youtube.com/watch?v=W6NOV6b8kxs)
 - [GitHub Tricks Demo Your software Application | Add video in GitHub readme file | Web Development](https://www.youtube.com/watch?v=clnpIjp5r88)
+- [Trying to embed a video to my Github repo's README.md file](https://stackoverflow.com/questions/76448540/trying-to-embed-a-video-to-my-github-repos-readme-md-file)
