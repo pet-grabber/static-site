@@ -158,3 +158,4 @@ https://github.com/user-attachments/assets/a4e0289a-28e5-451b-801d-b1837b615883
 - [LM2596 DC-DC Buck Converter Explained | DC-DC Step Down Converter Module | LM2596 Voltage Regulator](https://www.youtube.com/watch?v=DXM_xiR0o1c)
 - [How does Buck Converter work? | DC-DC Converter - 1](https://www.youtube.com/watch?v=W6NOV6b8kxs)
 - [GitHub Tricks Demo Your software Application | Add video in GitHub readme file | Web Development](https://www.youtube.com/watch?v=clnpIjp5r88)
+- [Trying to embed a video to my Github repo's README.md file](https://stackoverflow.com/questions/76448540/trying-to-embed-a-video-to-my-github-repos-readme-md-file)
