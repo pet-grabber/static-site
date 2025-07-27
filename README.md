@@ -116,6 +116,14 @@ Un pas relevant în dezvoltarea robotului și operării sale în medii necunoscu
 
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
 
+![PET Grabber văzut din stânga](images/11.JPEG) 
+
+![PET Grabber văzut din față](images/12.JPEG) 
+
+![PET Grabber văzut din dreapta](images/13.JPEG) 
+
+![PET Grabber văzut din spate](images/15.JPEG)
+
 ![Video 1](https://github.com/user-attachments/assets/1ce48c02-1b7f-453f-904f-151ed62d85fd)
 
 ![Video 2](https://github.com/user-attachments/assets/d979ede4-376f-4371-a5c4-a33911924110)
