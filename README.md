@@ -101,6 +101,17 @@ Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotu
 
 PET Grabber ar putea beneficia de adăugarea unui modem LTE/5G cu SIM pentru a avea internet în orice locație.
 
+### Sursă de alimentare comună
+
+O îmbunătățire importantă pentru PET Grabber ar fi implementarea unei surse de alimentare comune pentru toate componentele robotului. Gestionarea unei singure surse în loc de două buck convertoare și un powerbank permite un control mai precis al consumului. De asemenea, încărcarea s-ar putea face printr-o singură interfață, fără a scoate mai multe baterii sau powerbankul separat.
+
+### Sistem de direcție pentru mișcarea roților în direcția de viraj
+
+În loc ca roțile să se rotească fix în direcția înainte, se poate monta un mecanism de direcție (precum la o mașină reală) care folosește servomotoare pentru a roti efectiv roțile față în direcția dorită.
+
+### Suspensii și etanșarea împotriva apei și prafului
+Un pas relevant în dezvoltarea robotului și operării sale în medii necunoscut îl constituie introducerea suspensiilor pentru a-i permite deplasarea pe teren denivelat și etanșarea împotriva apei și prafului. Astfel, PET Grabber poate opera în medii mai dure, extinzându-i aplicabilitatea în colectarea deșeurilor.
+
 ## Imagini și videoclipuri
 
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
