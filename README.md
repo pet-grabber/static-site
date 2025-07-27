@@ -83,7 +83,7 @@ Brațul robotic (care are acum 2 grade de libertate) poate fi modificat pentru a
 
 ### Introducerea AI
 
-O evoluție extrem de importantă o poate constitui introducerea unui model de recunoaștere a obiectelor, precum [YOLOv5](https://github.com/ultralytics/yolov5) sau o versiune mai nouă, antrenat special pe detectarea gunoaielor. Acest model ar putea fi rulat pe Raspberry Pi alături de un model de detectare a distanței față de obiecte, precum [ml-depth-pro](https://github.com/apple/ml-depth-pro), dezvoltat de Apple.
+O evoluție extrem de importantă o poate constitui introducerea unui model de recunoaștere a obiectelor, precum [YOLOv5](https://github.com/ultralytics/yolov5) sau o versiune mai nouă, antrenat special pe detectarea gunoaielor. Acest model ar putea fi rulat pe Raspberry Pi alături de un model de detectare a distanței față de obiecte, precum [ml-depth-pro](https://github.com/apple/ml-depth-pro), dezvoltat de Apple, sau se poate adăuga un senzor ultrasonic.
 
 ![Model de detectare a gunoaielor rulat pe o imagine cu câteva gunoaie pe jos](/images/08.jpg)
 
@@ -91,7 +91,7 @@ O evoluție extrem de importantă o poate constitui introducerea unui model de r
 
 ### Materiale
 
-De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite, iar **baza și brațul pot fi modelate în CAD și printate 3D**, iar cleștele ar putea fi confecționat din PLA, care este biodegradabil, în loc de ABS, cum este acum.
+De asemenea, robotul va putea fi confecționat din alte materiale, mai potrivite, iar **baza și brațul pot fi modelate în CAD și printate 3D**. Cleștele ar putea fi confecționat din PLA, care este biodegradabil, în loc de ABS, cum este acum.
 
 ### Roți mai mari
 
@@ -101,9 +101,28 @@ Roțile ar putea fi și ele mai mari, fiind mai potrivite pentru mărimea robotu
 
 PET Grabber ar putea beneficia de adăugarea unui modem LTE/5G cu SIM pentru a avea internet în orice locație.
 
+### Sursă de alimentare comună
+
+O îmbunătățire importantă pentru PET Grabber ar fi implementarea unei surse de alimentare comune pentru toate componentele robotului. Gestionarea unei singure surse în loc de două buck convertoare și un powerbank permite un control mai precis al consumului. De asemenea, încărcarea s-ar putea face printr-o singură interfață, fără a scoate mai multe baterii sau powerbankul separat.
+
+### Sistem de direcție pentru mișcarea roților în direcția de viraj
+
+În loc ca roțile să se rotească fix în direcția înainte, se poate monta un mecanism de direcție (precum la o mașină reală) care folosește servomotoare pentru a roti efectiv roțile față în direcția dorită.
+
+### Suspensii și etanșarea împotriva apei și prafului
+Un pas relevant în dezvoltarea robotului și operării sale în medii necunoscut îl constituie introducerea suspensiilor pentru a-i permite deplasarea pe teren denivelat și etanșarea împotriva apei și prafului. Astfel, PET Grabber poate opera în medii mai dure, extinzându-i aplicabilitatea în colectarea deșeurilor.
+
 ## Imagini și videoclipuri
 
 ![Componentele electronice ale robotului PET Grabber](images/06.JPEG)
+
+![PET Grabber văzut din stânga](images/11.JPEG) 
+
+![PET Grabber văzut din față](images/12.JPEG) 
+
+![PET Grabber văzut din dreapta](images/13.JPEG) 
+
+![PET Grabber văzut din spate](images/15.JPEG)
 
 ![Video 1](https://github.com/user-attachments/assets/1ce48c02-1b7f-453f-904f-151ed62d85fd)
 
